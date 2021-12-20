@@ -1,6 +1,7 @@
 ""
 " Plugin: Neovim LSP client
 ""
+
 lua << EOF
 local nvim_lsp = require('lspconfig')
 
