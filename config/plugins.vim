@@ -53,7 +53,10 @@ Plug 'lfilho/cosco.vim'
 " Auto Pairs - insert or delete brackets, parens, quotes in pair
 Plug 'jiangmiao/auto-pairs'
 
-" Airline Status Bar
+" Indent blankline - line indentation
+Plug 'lukas-reineke/indent-blankline.nvim'
+
+"" Airline Status Bar
 " Plug 'vim-airline/vim-airline'
 
 " " COC Auto Completion

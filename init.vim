@@ -12,6 +12,7 @@ source $HOME/.config/nvim/config/loadlanguageservers.vim
 source $HOME/.config/nvim/config/generalsettings.vim
 
 " Plugins Configuration
+source $HOME/.config/nvim/config/plugin-indentblankline.vim
 source $HOME/.config/nvim/config/plugin-lualine.vim
 source $HOME/.config/nvim/config/plugin-nerdtree.vim
 source $HOME/.config/nvim/config/plugin-emmet.vim
