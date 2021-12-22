@@ -13,16 +13,18 @@ source $HOME/.config/nvim/config/generalsettings.vim
 
 " Plugins Configuration
 source $HOME/.config/nvim/config/plugin-indentblankline.vim
-source $HOME/.config/nvim/config/plugin-lualine.vim
 source $HOME/.config/nvim/config/plugin-nerdtree.vim
 source $HOME/.config/nvim/config/plugin-emmet.vim
 source $HOME/.config/nvim/config/plugin-gitgutter.vim
 source $HOME/.config/nvim/config/plugin-vimwiki.vim
 source $HOME/.config/nvim/config/plugin-cosco.vim
-source $HOME/.config/nvim/config/plugin-lspconfig.vim " Note: this should always be done after all other plugins have been configured
+source $HOME/.config/nvim/config/plugin-lspconfig.vim
 source $HOME/.config/nvim/config/plugin-treesitter.vim
 source $HOME/.config/nvim/config/plugin-telescope.vim
 source $HOME/.config/nvim/config/plugin-cmp.vim
+source $HOME/.config/nvim/config/plugin-cmp-nvim-ultisnips.vim
+source $HOME/.config/nvim/config/plugin-ultisnips.vim
+source $HOME/.config/nvim/config/plugin-lualine.vim
 
 " Key Binings (Mapping)
 source $HOME/.config/nvim/config/generalkeybindings.vim

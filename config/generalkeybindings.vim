@@ -4,7 +4,6 @@
 
 " Scrolling in insert mode
 inoremap <C-E> <C-X><C-E>
-
 inoremap <C-Y> <C-X><C-Y>
 
 " Make editing and sourcing ~/.config/nvim/init.vim easier
