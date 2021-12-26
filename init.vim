@@ -25,6 +25,7 @@ source $HOME/.config/nvim/config/plugin-cmp.vim
 source $HOME/.config/nvim/config/plugin-cmp-nvim-ultisnips.vim
 source $HOME/.config/nvim/config/plugin-ultisnips.vim
 source $HOME/.config/nvim/config/plugin-lualine.vim
+source $HOME/.config/nvim/config/emmet-ls.vim
 
 " Key Binings (Mapping)
 source $HOME/.config/nvim/config/generalkeybindings.vim
