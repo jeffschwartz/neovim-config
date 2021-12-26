@@ -35,7 +35,7 @@ set nrformats=
 
 " A saner autocomplete option menu
 "set completeopt=menuone,longest
-set completeopt=menuone,noinsert,noselect
+" set completeopt=menuone,noinsert,noselect
 
 " Make "find"ing work better
 set path+=**
