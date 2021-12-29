@@ -115,6 +115,10 @@ augroup CursorLine
   au WinLeave * setlocal nocursorline
 augroup END
 
+" Better Window Splitting
+ set splitright
+ set splitbelow
+
 " Better Searching
 set hlsearch
 set incsearch
