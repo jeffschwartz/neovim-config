@@ -5,11 +5,14 @@
 " Load Plugins
 source $HOME/.config/nvim/config/plugins.vim
 
-" Language Servers Management
-source $HOME/.config/nvim/config/loadlanguageservers.vim
-
 " General Vim Settings
 source $HOME/.config/nvim/config/generalsettings.vim
+
+" Key Binings (Mapping)
+source $HOME/.config/nvim/config/generalkeybindings.vim
+
+" Language Servers Management
+source $HOME/.config/nvim/config/loadlanguageservers.vim
 
 " Plugins Configuration
 source $HOME/.config/nvim/config/plugin-indentblankline.vim
@@ -26,6 +29,3 @@ source $HOME/.config/nvim/config/plugin-cmp-nvim-ultisnips.vim
 source $HOME/.config/nvim/config/plugin-ultisnips.vim
 source $HOME/.config/nvim/config/plugin-lualine.vim
 source $HOME/.config/nvim/config/emmet-ls.vim
-
-" Key Binings (Mapping)
-source $HOME/.config/nvim/config/generalkeybindings.vim
