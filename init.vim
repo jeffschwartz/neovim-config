@@ -6,13 +6,13 @@
 source $HOME/.config/nvim/config/plugins.vim
 
 " Language Servers Management
-source $HOME/.config/nvim/config/lspconfig.vim
 source $HOME/.config/nvim/config/loadlanguageservers.vim
+source $HOME/.config/nvim/config/lspconfig.vim
 
 " General Vim Settings
 source $HOME/.config/nvim/config/generalsettings.vim
 
-" Key Binings (Mapping)
+" " Key Binings (Mapping)
 source $HOME/.config/nvim/config/generalkeybindings.vim
 
 " Plugins Configuration
