@@ -2,6 +2,9 @@
 " key bindings
 ""
 
+" Displays a pop up window of keybindings
+nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
+
 " Scrolling in insert mode
 inoremap <C-E> <C-X><C-E>
 inoremap <C-Y> <C-X><C-Y>

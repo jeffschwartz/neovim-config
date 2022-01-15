@@ -40,11 +40,17 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'quangnguyen30192/cmp-nvim-ultisnips'
 
+" Dictionary Source For Word Completion
+Plug 'octaltree/cmp-look'
+
 " sass/css Colors
 Plug 'gko/vim-coloresque'
 
-" Color Picker;
+" Color Picker
 Plug 'KabbAmine/vCoolor.vim'
+
+" Show Keybindings In Popup
+Plug 'liuchengxu/vim-which-key'
 
 " VIM Repeat - Cosco dependency for repeat action
 Plug 'tpope/vim-repeat'
@@ -105,10 +111,6 @@ Plug 'gruvbox-community/gruvbox'
 
 " ACK
 Plug 'mileszs/ack.vim'
-
-" FZF Fuzzy Finder
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
 
 " VimWiki
 Plug 'vimwiki/vimwiki'
