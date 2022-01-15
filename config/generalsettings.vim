@@ -9,6 +9,9 @@ filetype on
 nnoremap <space> <Nop>
 let mapleader = "\<space>"
 
+" Minimal number of screen lines to keep above and below the cursor
+set scrolloff=5
+
 " Show white space as '•' which is useful to spot if a line has trailing white space
 set list
 set listchars=tab:>\ ,trail:•
