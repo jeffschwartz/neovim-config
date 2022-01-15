@@ -40,7 +40,9 @@ lua <<EOF
             -- { name = 'luasnip' }, -- For luasnip users.
             { name = 'ultisnips' }, -- For ultisnips users.
             }, {
-                { name = 'buffer' },
+            { name = 'buffer' },
+            }, {
+            { name = 'look',  keyword_length=2, option={convert_case=true, loud=true}}
         })
     })
 
