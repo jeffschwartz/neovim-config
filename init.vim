@@ -29,3 +29,5 @@ source $HOME/.config/nvim/config/plugin-cmp-nvim-ultisnips.vim
 source $HOME/.config/nvim/config/plugin-ultisnips.vim
 source $HOME/.config/nvim/config/plugin-lualine.vim
 source $HOME/.config/nvim/config/emmet-ls.vim
+
+let g:python3_host_prog ="/opt/homebrew/bin/python3"
