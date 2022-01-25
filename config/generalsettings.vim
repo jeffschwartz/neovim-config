@@ -48,7 +48,7 @@ set wildmenu
 set termguicolors
 
 " Colorscheme
-colorscheme gruvbox
+colorscheme nord
 let g:gruvbox_contrast_dark='hard'
 set background=dark " for the dark version
 

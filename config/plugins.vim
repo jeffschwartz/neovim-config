@@ -10,7 +10,7 @@
 "   names like 'plugin'
 ""
 
-call plug#begin('~/.local/share/nvim/plugged')
+call plug#begin()
 
 " Neovim's builtin language server (client)
 Plug 'neovim/nvim-lspconfig'
@@ -107,7 +107,8 @@ Plug 'tpope/vim-unimpaired'
 " Plug 'inkarkat/vim-SpellCheck'
 
 " Gruvbox color scheme
-Plug 'gruvbox-community/gruvbox'
+" Plug 'gruvbox-community/gruvbox'
+Plug 'shaunsingh/nord.nvim'
 
 " ACK
 Plug 'mileszs/ack.vim'
