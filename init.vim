@@ -30,4 +30,5 @@ source $HOME/.config/nvim/config/plugin-ultisnips.vim
 source $HOME/.config/nvim/config/plugin-lualine.vim
 source $HOME/.config/nvim/config/emmet-ls.vim
 
+:let g:loaded_perl_provider = 0
 let g:python3_host_prog ="/opt/homebrew/bin/python3"
