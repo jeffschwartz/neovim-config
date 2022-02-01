@@ -22,6 +22,9 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend upda
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 
+" Todo Comments
+Plug 'folke/todo-comments.nvim'
+
 " lualine.nvim (replacement status line for vim-airline written in Lua)
 Plug 'nvim-lualine/lualine.nvim'
 " If you want to have icons in your statusline choose one of these
