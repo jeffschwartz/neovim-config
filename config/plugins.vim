@@ -67,12 +67,6 @@ Plug 'jiangmiao/auto-pairs'
 " Indent blankline - line indentation
 Plug 'lukas-reineke/indent-blankline.nvim'
 
-"" Airline Status Bar
-" Plug 'vim-airline/vim-airline'
-
-" " COC Auto Completion
-" Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
 " Auto Save
 Plug '907th/vim-auto-save'
 
@@ -106,15 +100,10 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-unimpaired'
 
 " " spell check
-" Plug 'inkarkat/vim-ingo-library' "required for vim-SpellCheck
-" Plug 'inkarkat/vim-SpellCheck'
+Plug 'inkarkat/vim-ingo-library' "required for vim-SpellCheck
+Plug 'inkarkat/vim-SpellCheck'
 
-" Gruvbox color scheme
-" Plug 'gruvbox-community/gruvbox'
-Plug 'shaunsingh/nord.nvim'
-
-" ACK
-Plug 'mileszs/ack.vim'
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 
 " VimWiki
 Plug 'vimwiki/vimwiki'
@@ -124,9 +113,6 @@ Plug 'mattn/calendar-vim'
 
 " Targets - adds various additional text objects
 Plug 'wellle/targets.vim'
-
-" Yank Highlighting
-Plug 'machakann/vim-highlightedyank'
 
 " Diffview.nvim - a single tabpage interface to
 " cycle through diffs for all modified files for

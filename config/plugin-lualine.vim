@@ -3,11 +3,11 @@
 ""
 
 lua << EON
-local custom_gruvbox = require'lualine.themes.auto'
+local custom_theme = require'lualine.themes.auto'
 -- Change the background of lualine_c section for normal mode
 -- custom_gruvbox.normal.c.bg = '#112233' -- rgb colors are supported
 require'lualine'.setup{
-    options = { theme  = custom_gruvbox },
+    options = { theme  = custom_theme },
     icons_enabled = true,
     theme = 'auto',
     component_separators = { left = '', right = ''},
@@ -24,7 +24,7 @@ require'lualine'.setup{
                 -- 'nvim_lsp', 'nvim_diagnostic', 'coc', 'ale', 'vim_lsp'
                 -- Or a function that returns a table like
                 --   {error=error_cnt, warn=warn_cnt, info=info_cnt, hint=hint_cnt}
-                sources = {'nvim_diagnostic'},
+                sources = {'nvim_lsp', 'nvim_diagnostic', 'vim_lsp'},
                 -- displays diagnostics from defined severity
                 sections = {'error', 'warn', 'info', 'hint'},
                 diagnostics_color = {

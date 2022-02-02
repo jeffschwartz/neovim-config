@@ -48,12 +48,11 @@ set wildmenu
 set termguicolors
 
 " Colorscheme
-colorscheme nord
-let g:gruvbox_contrast_dark='hard'
-set background=dark " for the dark version
-
-" Transparent Background
-hi Normal guibg=NONE ctermbg=NONE
+let g:tokyonight_style = "night"
+let g:tokyonight_lualine_bold = 1
+let g:tokyonight_italic_functions = 1
+colorscheme tokyonight
+set background=dark
 
 " Automatic toggling between line number modes
 set number relativenumber
@@ -128,3 +127,6 @@ set incsearch
 set ignorecase
 set smartcase
 set inccommand=nosplit "see http://vimcasts.org/episodes/neovim-eyecandy/ for desciption
+
+" Use neovim's highligh yank
+au TextYankPost * silent! lua vim.highlight.on_yank()
