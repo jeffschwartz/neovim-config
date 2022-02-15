@@ -53,7 +53,7 @@ Plug 'gko/vim-coloresque'
 Plug 'KabbAmine/vCoolor.vim'
 
 " Show Keybindings In Popup
-Plug 'liuchengxu/vim-which-key'
+" Plug 'liuchengxu/vim-which-key'
 
 " VIM Repeat - Cosco dependency for repeat action
 Plug 'tpope/vim-repeat'

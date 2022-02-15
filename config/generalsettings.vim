@@ -6,11 +6,11 @@
 filetype on
 
 " Leader
-nnoremap <space> <Nop>
+" nnoremap <space> <Nop>
 let mapleader = "\<space>"
 
 " Minimal number of screen lines to keep above and below the cursor
-set scrolloff=5
+set scrolloff=4
 
 " Show white space as '•' which is useful to spot if a line has trailing white space
 set list
@@ -48,9 +48,17 @@ set wildmenu
 set termguicolors
 
 " Colorscheme
+" see https://github.com/folke/tokyonight.nvim for details
 let g:tokyonight_style = "night"
 let g:tokyonight_lualine_bold = 1
 let g:tokyonight_italic_functions = 1
+let g:tokyonight_italic_variables = 1
+let g:tokyonight_terminal_colors = 1
+let g:tokyonight_dark_sidebar = 1
+let g:tokyonight_dark_float = 1
+let g:tokyonight_hide_inactive_statusline = 1
+let g:tokyonight_dark_float = 1
+
 colorscheme tokyonight
 set background=dark
 

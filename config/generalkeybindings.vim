@@ -3,7 +3,7 @@
 ""
 
 " Displays a pop up window of keybindings
-nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
+" nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 
 " Scrolling in insert mode
 inoremap <C-E> <C-X><C-E>
