@@ -16,6 +16,7 @@ command! Source execute ":source ~/.config/nvim/init.vim"
 " Buffer Navigation
 nmap <leader>bp :bprevious<CR>
 nmap <leader>bn :bnext<CR>
+nmap <leader>bw :bwipe<CR>
 nmap <leader>bd :bdelete<CR>
 nmap <leader>ba :%bdelete<CR>
 nmap <leader>bb <C-^>
