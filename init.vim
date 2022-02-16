@@ -6,6 +6,7 @@
 source $HOME/.config/nvim/config/plugins.vim
 
 " Language Servers Management
+source $HOME/.config/nvim/config/lua-lsp.vim
 source $HOME/.config/nvim/config/loadlanguageservers.vim
 source $HOME/.config/nvim/config/lspconfig.vim
 
