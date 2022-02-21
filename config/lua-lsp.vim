@@ -31,6 +31,9 @@ require'lspconfig'.sumneko_lua.setup {
         enable = false,
       },
     },
+    root_dir = function(fname)
+      return vim.fn.getcwd()
+    end
   },
 }
 EOF

@@ -2,7 +2,7 @@
 " General Vim Settings
 ""
 
-" Enable file type detectio:autocmd!n
+" Enable file type detectio:autocmd
 filetype on
 
 " Leader
@@ -94,7 +94,7 @@ set clipboard+=unnamedplus
 syntax on
 
 " Remove trailing white space from lines when writing the buffer
-autocmd FileType c,cpp,java,js,php,html,markdown,vim,lua autocmd BufWritePre <buffer> %s/\s\+$//e
+autocmd FileType c,cpp,java,js,ts,php,html,markdown,vim,lua autocmd BufWritePre <buffer> %s/\s\+$//e
 
 " Ignored Files
 set wildignore=*/node_modules/*
@@ -110,10 +110,10 @@ set wrap linebreak
 "Display The File Name In The Terminal Tab
 set title
 
-" If this many milliseconds nothing is typed the swap file will be
+" If this many milliseconds (default=400) nothing is typed the swap file will be
 " written to disk (see |crash-recovery|).  Also used for the
 " |CursorHold| autocommand event.
-set updatetime=100
+" set updatetime=100
 
 " Mouse Support
 set mouse=a
