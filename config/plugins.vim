@@ -85,10 +85,8 @@ Plug 'scrooloose/nerdtree'
 " NERDTree Git Integration
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
-" Markdown Support
-" Plug 'gabrielelana/vim-markdown'
-" Markdown Preview
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
+" Markdown With Math Support
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 
 " Gitgutter
 Plug 'airblade/vim-gitgutter'
