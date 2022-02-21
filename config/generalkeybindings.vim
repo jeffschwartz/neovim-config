@@ -51,9 +51,9 @@ nnoremap <leader>wr <C-w>r
 nnoremap <leader>w= <C-w>=
 "
 " Close the current split
-nnoremap <leader>sc :close<Return>
+nnoremap <leader>wc :close<Return>
 " Close all other splits
-nnoremap <leader>so <C-w>o
+nnoremap <leader>wo <C-w>o
 "
 " Next tab
 nnoremap <leader>tn :tabn<CR>
