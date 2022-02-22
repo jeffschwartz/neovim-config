@@ -27,6 +27,7 @@ source $HOME/.config/nvim/config/plugin-cosco.vim
 source $HOME/.config/nvim/config/plugin-treesitter.vim
 source $HOME/.config/nvim/config/plugin-telescope.vim
 source $HOME/.config/nvim/config/plugin-cmp.vim
+source $HOME/.config/nvim/config/plugin-cmp-look.lua
 " source $HOME/.config/nvim/config/plugin-cmp-nvim-ultisnips.vim - not currently used
 source $HOME/.config/nvim/config/plugin-ultisnips.vim
 source $HOME/.config/nvim/config/plugin-lualine.vim

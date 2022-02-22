@@ -1,6 +1,6 @@
-""
+"r
 " Plugin: cmp.vim
-" Autocompletion
+" Autocompletion - See https://github.com/hrsh7th/nvim-cmp
 ""
 
 set completeopt="menu,menuone,noinsert"
@@ -33,16 +33,23 @@ lua <<EOF
             ['<CR>'] = cmp.mapping.confirm({ select = true }),
         },
         sources = cmp.config.sources({
-            { name = 'nvim_lsp' },
-            { name = 'tsserver' },
             -- { name = 'vsnip' }, -- For vsnip users.
             -- { name = 'snippy' }, -- For snippy users.
             -- { name = 'luasnip' }, -- For luasnip users.
+            { name = 'nvim_lsp' },
+            { name = 'tsserver' },
+            { name = 'sumneko_lua' },
             { name = 'ultisnips' }, -- For ultisnips users.
             }, {
             { name = 'buffer' },
-            }, {
-            { name = 'look',  keyword_length=2, option={convert_case=true, loud=true}}
+        })
+    })
+
+  -- Set configuration for specific filetype.
+
+    cmp.setup.filetype('gitcommit', {
+        sources = cmp.config.sources({
+          { name = 'buffer' },
         })
     })
 
