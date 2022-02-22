@@ -94,7 +94,7 @@ set clipboard+=unnamedplus
 syntax on
 
 " Remove trailing white space from lines when writing the buffer
-autocmd FileType c,cpp,java,js,ts,php,html,markdown,vim,lua autocmd BufWritePre <buffer> %s/\s\+$//e
+autocmd FileType c,cpp,java,js,json,ts,php,html,markdown,vim,lua autocmd BufWritePre <buffer> %s/\s\+$//e
 
 " Ignored Files
 set wildignore=*/node_modules/*
