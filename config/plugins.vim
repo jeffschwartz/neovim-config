@@ -30,21 +30,19 @@ Plug 'nvim-lualine/lualine.nvim'
 " If you want to have icons in your statusline choose one of these
 Plug 'kyazdani42/nvim-web-devicons'
 
-" Code Completion
+" nvim-cmp Code Completion Providers
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'onsails/lspkind-nvim'
-
-" Snippets
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
-Plug 'quangnguyen30192/cmp-nvim-ultisnips'
-
-" Dictionary Source For Word Completion
+Plug 'saadparwaiz1/cmp_luasnip'
 Plug 'octaltree/cmp-look'
+
+" LuaSnip
+" Plug 'rafamadriz/friendly-snippets'
+Plug 'L3MON4D3/LuaSnip'
 
 " sass/css Colors
 Plug 'gko/vim-coloresque'

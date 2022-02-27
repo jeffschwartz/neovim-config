@@ -1,4 +1,4 @@
-"r
+""
 " Plugin: cmp.vim
 " Autocompletion - See https://github.com/hrsh7th/nvim-cmp
 ""
@@ -8,20 +8,21 @@ set completeopt="menu,menuone,noinsert"
 lua <<EOF
     -- Setup nvim-cmp.
     local cmp = require'cmp'
-
     cmp.setup({
         snippet = {
             -- REQUIRED - you must specify a snippet engine
             expand = function(args)
                 -- vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
                 -- require('snippy').expand_snippet(args.body) -- For `snippy` users.
-                -- require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
-                vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
+                -- vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
+                require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
             end,
         },
         mapping = {
             ['<C-b>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),
             ['<C-f>'] = cmp.mapping(cmp.mapping.scroll_docs(4), { 'i', 'c' }),
+            ['<C-k>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),
+            ['<C-j>'] = cmp.mapping(cmp.mapping.scroll_docs(4), { 'i', 'c' }),
             ['<C-Space>'] = cmp.mapping(cmp.mapping.complete(), { 'i', 'c' }),
              -- Specify `cmp.config.disable` if you want to remove the default `<C-y>` mapping.
             ['<C-y>'] = cmp.config.disable,
@@ -37,10 +38,13 @@ lua <<EOF
             -- { name = 'snippy' }, -- For snippy users.
             -- { name = 'luasnip' }, -- For luasnip users.
             { name = 'nvim_lsp' },
+            { name = 'treesitter' },
             { name = 'tsserver' },
+            { name = 'eslint' },
             { name = 'sumneko_lua' },
-            { name = 'ultisnips' }, -- For ultisnips users.
-            }, {
+            { name = 'luasnip' }, -- For luasnip users.
+            { name = 'path' },
+            { name = 'look' },
             { name = 'buffer' },
         })
     })
@@ -69,26 +73,14 @@ lua <<EOF
         })
     })
 
-    -- Setup lspconfig.
-    local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
-    -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
-    require('lspconfig')['tsserver'].setup {
-        capabilities = capabilities
-    }
-
-    -- Setup lspkind.
+    -- Setup lskpkind
     local lspkind = require('lspkind')
     cmp.setup {
-        formatting = {
-            format = lspkind.cmp_format({
-                with_text = true, -- do not show text alongside icons
-                maxwidth = 50, -- prevent the popup from showing more than provided characters (e.g 50 will not show more than 50 characters)
-                -- The function below will be called before any actual modifications from lspkind
-                -- so that you can provide more controls on popup customization. (See [#30](https://github.com/onsails/lspkind-nvim/pull/30))
-                before = function (entry, vim_item)
-                    return vim_item
-                end
-            })
-        }
+      formatting = {
+          format = lspkind.cmp_format({
+              mode = 'text', -- show only text
+              maxwidth = 50, -- prevent the popup from showing more than provided characters (e.g 50 will not show more than 50 characters)
+          })
+      }
     }
 EOF

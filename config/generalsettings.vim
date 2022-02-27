@@ -2,12 +2,18 @@
 " General Vim Settings
 ""
 
+" A comma separated list of options for Insert mode completion
+set completeopt=menu,menuone,noselect
+
 " Enable file type detectio:autocmd
 filetype on
 
 " Leader
 " nnoremap <space> <Nop>
 let mapleader = "\<space>"
+
+" Lua syntax highlighting inside .vim files
+let g:vimsyn_embed = 'l'
 
 " Minimal number of screen lines to keep above and below the cursor
 set scrolloff=4
@@ -94,7 +100,7 @@ set clipboard+=unnamedplus
 syntax on
 
 " Remove trailing white space from lines when writing the buffer
-autocmd FileType c,cpp,java,js,json,ts,php,html,markdown,vim,lua autocmd BufWritePre <buffer> %s/\s\+$//e
+autocmd FileType c,cpp,java,javascript,json,ts,php,html,markdown,vim,lua autocmd BufWritePre <buffer> %s/\s\+$//e
 
 " Ignored Files
 set wildignore=*/node_modules/*
