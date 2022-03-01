@@ -118,8 +118,11 @@ set title
 
 " If this many milliseconds (default=400) nothing is typed the swap file will be
 " written to disk (see |crash-recovery|).  Also used for the
-" |CursorHold| autocommand event.
+" CursorHold autocommand event.
 " set updatetime=100
+
+" Time in milliseconds to wait (defaults to 1000) for a mapped sequence to complete.
+set timeoutlen=1500
 
 " Mouse Support
 set mouse=a
