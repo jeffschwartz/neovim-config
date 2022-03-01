@@ -72,3 +72,6 @@ map <silent> <leader>s :setlocal spell! spelllang=en_us<CR>
 
 " Change, Go Next The Current Word (i.e. CGN) without having to first do a search!
 nnoremap <F6> :let @/= expand('<cword>')<cr>cgnutoPairsReturn
+
+" Quit NVIM/Vim
+nnoremap <leader>q :q<CR>
