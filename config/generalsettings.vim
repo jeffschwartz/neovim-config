@@ -9,7 +9,7 @@ set completeopt=menu,menuone,noselect
 filetype on
 
 " Leader
-" nnoremap <space> <Nop>
+nnoremap <SPACE> <Nop>
 let mapleader = "\<space>"
 
 " Lua syntax highlighting inside .vim files
@@ -122,7 +122,7 @@ set title
 " set updatetime=100
 
 " Time in milliseconds to wait (defaults to 1000) for a mapped sequence to complete.
-set timeoutlen=1500
+" set timeoutlen=1500
 
 " Mouse Support
 set mouse=a
