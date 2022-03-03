@@ -9,6 +9,7 @@
 " - Avoid using standard Vim directory
 "   names like 'plugin'
 ""
+ packadd cfilter
 
 call plug#begin()
 
