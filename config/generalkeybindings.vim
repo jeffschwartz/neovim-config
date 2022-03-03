@@ -1,13 +1,9 @@
 ""
-" key bindings
+ " key bindings
 ""
 
-" Displays a pop up window of keybindings
-" nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
-
-" Scrolling in insert mode
-inoremap <C-E> <C-X><C-E>
-inoremap <C-Y> <C-X><C-Y>
+" inoremap <C-Y> <C-X><C-Y>
+" inoremap <c-x><c-k> <c-x><c-k>
 
 " Make editing and sourcing ~/.config/nvim/init.vim easier
 command! Config execute ":e ~/.config/nvim/init.vim"
@@ -16,49 +12,54 @@ command! Source execute ":source ~/.config/nvim/init.vim"
 " Buffers
 "
 " Buffer Navigation
-nmap <leader>bp :bprevious<CR>
-nmap <leader>bn :bnext<CR>
-nmap <leader>bw :bwipe<CR>
-nmap <leader>bd :bdelete<CR>
-nmap <leader>ba :%bdelete<CR>
-nmap <leader>bb <C-^>
-nmap <leader>bl :ls<CR>
+noremap <leader>bp :bprevious<CR>
+noremap <leader>bn :bnext<CR>
+noremap <leader>bd :bdelete<CR>
+noremap <leader>bb <C-^>
+noremap <leader>bl :ls<CR>
+"
+" delete all buffers
+noremap <leader>ba :%bdelete<CR>
 "delete all buffers except the current one
-nmap <leader>bo :w <bar> %bd <bar> e# <bar> bd#<CR>
+noremap <leader>bo :w <bar> %bd <bar> e# <bar> bd#<CR>
+"
+" wipeout the current buffer
+noremap <leader>bw :bwipe<CR>
+" wipeout all buffers
+noremap <leader>bwa %bwipeout
+"
+" select a buffer fro a list of all buffers
 nnoremap <F5> :buffers<CR>:b<Space>
 
 " Paging
-nmap <space>f <C-f>
-nmap <space>b <C-b>
+" forward
+noremap <space>f <C-f>
+" backward
+noremap <space>b <C-b>
 
-" Windows/Splits/Tabs
-"
-" Split window
-nnoremap <leader>ws :split<Return><C-w>w
-nnoremap <leader>wv :vsplit<Return><C-w>w
-"
-" Open and close the quickfix window
-nnoremap gq :copen<CR>
-nnoremap gqc :ccl<CR>
-"
-" Move to window
-nnoremap <leader>wn <C-w>w
-nnoremap <leader>wh <C-w>h
-nnoremap <leader>wk <C-w>k
-nnoremap <leader>wj <C-w>j
-nnoremap <leader>wl <C-w>l
-nnoremap <leader>wr <C-w>r
-nnoremap <leader>w= <C-w>=
-"
-" Close the current split
-nnoremap <leader>wc :close<Return>
-" Close all other splits
-nnoremap <leader>wo <C-w>o
-"
-" Next tab
-nnoremap <leader>tn :tabn<CR>
-" Previous tab
-nnoremap <leader>tp :tabp<CR>
+"" Windows/Splits/Tabs
+""
+"" Split window
+"nnoremap <leader>s :split<Return><C-w>w
+"nnoremap <leader>v :vsplit<Return><C-w>w
+""
+"" Move to window
+"nnoremap <leader>w <C-w>w
+"nnoremap <leader>h <C-w>h
+"nnoremap <leader>k <C-w>k
+"nnoremap <leader>j <C-w>j
+"nnoremap <leader>l <C-w>l
+"nnoremap <leader>r <C-w>r
+"nnoremap <leader>= <C-w>=
+""
+"" Close the current window
+"nnoremap <leader>c :close<Return>
+"" Close all other window
+"nnoremap <leader>a <C-w>o
+""
+"" Open and close the quickfix window
+"nnoremap gq :copen<CR>
+"nnoremap gqc :ccl<CR>
 
 " Escape
 imap jj <Esc>
