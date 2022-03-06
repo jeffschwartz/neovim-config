@@ -8,6 +8,9 @@ set completeopt=menu,menuone,noselect
 " Enable file type detectio:autocmd
 filetype on
 
+" Gutter width
+set numberwidth=5
+
 " Leader
 nnoremap <SPACE> <Nop>
 let mapleader = "\<space>"
