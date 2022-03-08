@@ -1,3 +1,4 @@
+
 ----
 -- Plugin: Neovim LSP client
 ----
@@ -49,3 +50,22 @@ for _, lsp in ipairs(servers) do
             }
         }
 end
+
+-- Typescript Configuration
+-- Configure to not show warning "File is a CommonJS module; it may be converted to an E5 module."
+nvim_lsp.tsserver.setup({
+  handlers = {
+    ["textDocument/publishDiagnostics"] = function(_, _, params, client_id, _, config)
+      if params.diagnostics ~= nil then
+        local idx = 1
+        while idx <= #params.diagnostics do
+          if params.diagnostics[idx].code == 80001 then
+            table.remove(params.diagnostics, idx)
+          else
+            idx = idx + 1
+          end
+        end
+      end
+    end,
+  },
+})
