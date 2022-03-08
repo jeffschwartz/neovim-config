@@ -2,6 +2,13 @@
 " General Vim Settings
 ""
 
+" Influence how Vim formats text
+set formatoptions=tc
+
+" Copy indent from current line when starting a new line (typing <CR>
+" in Insert mode or when using the "o" or "O" command)
+set autoindent
+
 " A comma separated list of options for Insert mode completion
 set completeopt=menu,menuone,noselect
 
