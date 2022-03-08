@@ -7,3 +7,22 @@ endsnippet
 snippet td "TODO comment" b
 // TODO: `date +%y\/%m\/%d\ %H:%M:%S` - ${1:initials} : ${2:description}
 endsnippet
+
+snippet cl "console log" b
+console.log("$1", $1);$0
+endsnippet
+
+snippet us "use strict" a
+"use strict";$0
+endsnippet
+
+snippet nm "node module" a
+/**
+ * $1
+*/
+
+"use strict";
+
+const ${2:variable name} = require(${3:required module });
+$0
+endsnippet
