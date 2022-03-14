@@ -22,3 +22,6 @@ nnoremap <silent> <leader>t :call SyncTree()<CR>
 
 " Quit NERDTree after opening file
 let g:NERDTreeQuitOnOpen = 1
+
+" Show hidden files dy default
+let NERDTreeShowHidden=1

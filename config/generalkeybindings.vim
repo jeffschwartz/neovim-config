@@ -1,4 +1,4 @@
-""
+"";
  " key bindings
 ""
 
@@ -33,9 +33,9 @@ nnoremap <F5> :buffers<CR>:b<Space>
 
 " Paging
 " forward
-noremap <space>f <C-f>
+noremap <leader>j <C-f>;
 " backward
-noremap <space>b <C-b>
+noremap <leader>k <C-b>;
 
 "" Windows/Splits/Tabs
 ""

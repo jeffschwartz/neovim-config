@@ -1,4 +1,3 @@
-
 ----
 -- Plugin: Neovim LSP client
 ----
@@ -36,7 +35,7 @@ local on_attach = function(client, bufnr)
     vim.api.nvim_buf_set_keymap(bufnr, 'n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>', opts)
     vim.api.nvim_buf_set_keymap(bufnr, 'n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>', opts)
     vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>sl', '<cmd>lua vim.diagnostic.setloclist()<CR>', opts)
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>bf', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
+    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 end
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
@@ -47,25 +46,25 @@ for _, lsp in ipairs(servers) do
         on_attach = on_attach,
         flags = {
             debounce_text_changes = 150,
-            }
         }
+    }
 end
 
 -- Typescript Configuration
 -- Configure to not show warning "File is a CommonJS module; it may be converted to an E5 module."
 nvim_lsp.tsserver.setup({
-  handlers = {
-    ["textDocument/publishDiagnostics"] = function(_, _, params, client_id, _, config)
-      if params.diagnostics ~= nil then
-        local idx = 1
-        while idx <= #params.diagnostics do
-          if params.diagnostics[idx].code == 80001 then
-            table.remove(params.diagnostics, idx)
-          else
-            idx = idx + 1
-          end
-        end
-      end
-    end,
-  },
+    handlers = {
+        ["textDocument/publishDiagnostics"] = function(_, _, params, client_id, _, config)
+            if params.diagnostics ~= nil then
+                local idx = 1
+                while idx <= #params.diagnostics do
+                    if params.diagnostics[idx].code == 80001 then
+                        table.remove(params.diagnostics, idx)
+                    else
+                        idx = idx + 1
+                    end
+                end
+            end
+        end,
+    },
 })

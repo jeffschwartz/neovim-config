@@ -1,6 +1,9 @@
-""
+"";
 " General Vim Settings
 ""
+
+" Path where swap files will reside
+set directory=$HOME/.config/nvim/swapfiles/
 
 " Influence how Vim formats text
 set formatoptions=tc

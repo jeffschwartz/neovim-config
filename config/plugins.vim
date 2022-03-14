@@ -43,10 +43,6 @@ Plug 'onsails/lspkind-nvim'
 Plug 'quangnguyen30192/cmp-nvim-ultisnips'
 Plug 'octaltree/cmp-look'
 
-" " LuaSnip
-" " Plug 'rafamadriz/friendly-snippets'
-" Plug 'L3MON4D3/LuaSnip'
-
 " Ultisnips
 Plug 'SirVer/ultisnips'
 

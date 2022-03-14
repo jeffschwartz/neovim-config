@@ -1,22 +1,26 @@
-snippet cmb "JavaScript comment block" b
+snippet fh "file header" b
 /**
  * $1
 */
+
+"use strict";
+
+$0
 endsnippet
 
 snippet td "TODO comment" b
-// TODO: `date +%y\/%m\/%d\ %H:%M:%S` - ${1:initials} : ${2:description}
+// ${1:TODO}: `date +%y\/%m\/%d\ %H:%M:%S` - ${2:`echo $USER`} : ${3:description}$0
 endsnippet
 
 snippet cl "console log" b
-console.log("$1", $1);$0
+console.log("$1", $1$2);$0
 endsnippet
 
-snippet us "use strict" a
+snippet us "use strict" b
 "use strict";$0
 endsnippet
 
-snippet nm "node module" a
+snippet mh "module header" b
 /**
  * $1
 */
@@ -25,4 +29,18 @@ snippet nm "node module" a
 
 const ${2:variable name} = require(${3:required module });
 $0
+endsnippet
+
+snippet req "require" b;
+const { $2 } = require("${1:required}");$0
+endsnippet
+
+snippet fn "function" b
+function ${1:name} (${2:args}) {
+$0
+}
+endsnippet
+
+snippet afn "arrow function" i
+(${1:arguments}) => {$2}$0
 endsnippet
