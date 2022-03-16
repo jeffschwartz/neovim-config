@@ -6,11 +6,14 @@
 set directory=$HOME/.config/nvim/swapfiles/
 
 " Influence how Vim formats text
-set formatoptions=tc
+" set formatoptions=tcj
 
 " Copy indent from current line when starting a new line (typing <CR>
 " in Insert mode or when using the "o" or "O" command)
-set autoindent
+" set autoindent
+"" Do smart autoindenting when starting a new line.
+"" Works for C-like programs, but can also be used for other languages.
+set smartindent
 
 " A comma separated list of options for Insert mode completion
 set completeopt=menu,menuone,noselect
@@ -55,10 +58,6 @@ set shortmess+=c
 " octal (i.e. have leading zeros)
 set nrformats=
 
-" A saner autocomplete option menu
-"set completeopt=menuone,longest
-" set completeopt=menuone,noinsert,noselect
-
 " Make "find"ing work better
 set path+=**
 set wildmenu
@@ -81,12 +80,24 @@ let g:tokyonight_dark_float = 1
 colorscheme tokyonight
 set background=dark
 
+" Auto Commands
 " Automatic toggling between line number modes
 set number relativenumber
 augroup numbertoggle
     autocmd!
     autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
     autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+augroup END
+
+augroup Format-Options
+    autocmd!
+    autocmd BufEnter * setlocal formatoptions=t,c,r,j
+augroup END
+
+" Remove trailing white space from lines when writing the buffer
+augroup Remove-Trailong-White-Space-From-Lines
+    autocmd!
+    autocmd FileType c,cpp,java,javascript,json,ts,php,html,markdown,vim,lua autocmd BufWritePre <buffer> %s/\s\+$//e
 augroup END
 
 " Display the ruler in the status bar
@@ -112,9 +123,6 @@ set clipboard+=unnamedplus
 " Syntax highlighting
 syntax on
 
-" Remove trailing white space from lines when writing the buffer
-autocmd FileType c,cpp,java,javascript,json,ts,php,html,markdown,vim,lua autocmd BufWritePre <buffer> %s/\s\+$//e
-
 " Ignored Files
 set wildignore=*/node_modules/*
 
@@ -135,7 +143,7 @@ set title
 " set updatetime=100
 
 " Time in milliseconds to wait (defaults to 1000) for a mapped sequence to complete.
-" set timeoutlen=1500
+" set timeoutlen=500
 
 " Mouse Support
 set mouse=a

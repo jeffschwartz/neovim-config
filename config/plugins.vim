@@ -60,6 +60,7 @@ Plug 'tpope/vim-repeat'
 
 " Colon and semicolon insertion
 Plug 'lfilho/cosco.vim'
+" Plug 'jeffschwartz/cosco.vim', {'branch': 'hotfix-comment'}
 
 " Auto Pairs - insert or delete brackets, parens, quotes in pair
 Plug 'jiangmiao/auto-pairs'

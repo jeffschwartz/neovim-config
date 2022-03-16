@@ -44,13 +44,13 @@ noremap <leader>k <C-b>;
 "nnoremap <leader>v :vsplit<Return><C-w>w
 ""
 "" Move to window
-"nnoremap <leader>w <C-w>w
-"nnoremap <leader>h <C-w>h
-"nnoremap <leader>k <C-w>k
-"nnoremap <leader>j <C-w>j
-"nnoremap <leader>l <C-w>l
-"nnoremap <leader>r <C-w>r
-"nnoremap <leader>= <C-w>=
+" nnoremap <leader>ww <C-w>w
+" nnoremap <leader>wh <C-w>h
+" nnoremap <leader>wk <C-w>k
+" nnoremap <leader>wj <C-w>j
+" nnoremap <leader>wl <C-w>l
+" nnoremap <leader>wr <C-w>r
+" nnoremap <leader>w= <C-w>=
 ""
 "" Close the current window
 "nnoremap <leader>c :close<Return>

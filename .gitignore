@@ -4,3 +4,4 @@ coc-settings.json
 init.vim.save
 spell/**.*
 colors
+swapfiles
