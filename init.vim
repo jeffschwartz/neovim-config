@@ -34,6 +34,11 @@ source $HOME/.config/nvim/config/plugin-lualine.vim
 source $HOME/.config/nvim/config/plugin-markdown-preview.vim
 
 "
+" Line separator between window splits
+" See https://www.youtube.com/watch?v=jH5PNvJIa6o&t=2s for info
+set laststatus=3
+highlight WinSeparator guibg=None
+
 " Languages
 "
 " Perl Not Supported
