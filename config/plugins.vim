@@ -19,6 +19,7 @@ Plug 'neovim/nvim-lspconfig'
 " Treesitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 Plug 'nvim-treesitter/playground'
+Plug 'nvim-treesitter/nvim-treesitter-refactor'
 
 " Telescope
 Plug 'nvim-lua/plenary.nvim'
