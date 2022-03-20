@@ -29,8 +29,6 @@ Plug 'folke/todo-comments.nvim'
 
 " lualine.nvim (replacement status line for vim-airline written in Lua)
 Plug 'nvim-lualine/lualine.nvim'
-" If you want to have icons in your statusline choose one of these
-Plug 'kyazdani42/nvim-web-devicons'
 
 " nvim-cmp Code Completion Providers
 Plug 'hrsh7th/cmp-nvim-lsp'
@@ -80,11 +78,15 @@ Plug 'tpope/vim-surround'
 " Commentary
 Plug 'tpope/vim-commentary'
 
-" NERDTree File System Manager
-Plug 'scrooloose/nerdtree'
+" " NERDTree File System Manager
+" Plug 'scrooloose/nerdtree'
 
-" NERDTree Git Integration
-Plug 'Xuyuanp/nerdtree-git-plugin'
+" " NERDTree Git Integration
+" Plug 'Xuyuanp/nerdtree-git-plugin'
+
+" nvim-tree.lua
+Plug 'kyazdani42/nvim-web-devicons' " for file icons
+Plug 'kyazdani42/nvim-tree.lua'
 
 " Markdown With Math Support
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
@@ -117,5 +119,8 @@ Plug 'wellle/targets.vim'
 " cycle through diffs for all modified files for
 " any git rev - requires Neovim >= 0.5.0
 " Plug 'sindrets/diffview.nvim'
+
+" " Icons for your statusline
+" Plug 'kyazdani42/nvim-web-devicons'
 
 call plug#end()

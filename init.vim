@@ -18,9 +18,11 @@ source $HOME/.config/nvim/config/generalsettings.vim
 source $HOME/.config/nvim/config/generalkeybindings.vim
 
 " Plugins Configuration
+source $HOME/.config/nvim/config/plugin-nvim-web-devicons.lua
 source $HOME/.config/nvim/config/plugin-todo-comments.lua
 source $HOME/.config/nvim/config/plugin-indentblankline.vim
-source $HOME/.config/nvim/config/plugin-nerdtree.vim
+" source $HOME/.config/nvim/config/plugin-nerdtree.vim
+source $HOME/.config/nvim/config/plugin-nvim-tree.lua
 source $HOME/.config/nvim/config/plugin-emmet.vim
 source $HOME/.config/nvim/config/plugin-gitgutter.vim
 source $HOME/.config/nvim/config/plugin-vimwiki.vim
