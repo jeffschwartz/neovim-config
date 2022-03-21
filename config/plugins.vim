@@ -64,7 +64,7 @@ Plug 'lfilho/cosco.vim'
 " Auto Pairs - insert or delete brackets, parens, quotes in pair
 Plug 'jiangmiao/auto-pairs'
 
-" Indent blankline - line indentation
+" Indent blankline - indent guides
 Plug 'lukas-reineke/indent-blankline.nvim'
 
 " Auto Save
