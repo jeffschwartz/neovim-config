@@ -100,6 +100,12 @@ augroup Remove-Trailong-White-Space-From-Lines
     autocmd FileType c,cpp,java,javascript,json,ts,php,html,markdown,vim,lua autocmd BufWritePre <buffer> %s/\s\+$//e
 augroup END
 
+" Highlight yank
+augroup highlight_yank
+    autocmd!
+    au TextYankPost * silent! lua vim.highlight.on_yank{higroup="IncSearch", timeout=700}
+augroup END
+
 " Display the ruler in the status bar
 set ruler
 
