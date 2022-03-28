@@ -25,6 +25,9 @@ Plug 'nvim-treesitter/nvim-treesitter-refactor'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 
+" Doge Documentation Generator
+Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
+
 " Todo Comments
 Plug 'folke/todo-comments.nvim'
 
