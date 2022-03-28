@@ -106,6 +106,11 @@ augroup highlight_yank
     au TextYankPost * silent! lua vim.highlight.on_yank{higroup="IncSearch", timeout=700}
 augroup END
 
+augroup nvim_tree
+    autocmd!
+    autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif
+augroup END
+
 " Display the ruler in the status bar
 set ruler
 
