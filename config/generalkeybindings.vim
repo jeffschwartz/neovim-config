@@ -75,4 +75,4 @@ map <silent> <leader>s :setlocal spell! spelllang=en_us<CR>
 nnoremap <F6> :let @/= expand('<cword>')<cr>cgnutoPairsReturn
 
 " Quit NVIM/Vim
-nnoremap <leader>q :q<CR>
+nnoremap <leader>qq :q<CR>
