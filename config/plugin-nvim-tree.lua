@@ -5,7 +5,7 @@
 
 -- setup with all defaults
 -- each of these are documented in `:help nvim-tree.OPTION_NAME`
-require'nvim-tree'.setup { -- BEGIN_DEFAULT_OPTS
+require'nvim-tree'.setup {
     auto_reload_on_write = true,
     disable_netrw = false,
     hide_root_folder = false,
@@ -69,6 +69,16 @@ require'nvim-tree'.setup { -- BEGIN_DEFAULT_OPTS
             },
         },
     },
+    renderer = {
+        indent_markers = {
+            enable = false,
+            icons = {
+                corner = "└ ",
+                edge = "│ ",
+                none = "  ",
+            },
+        },
+    },
     hijack_directories = {
         enable = true,
         auto_open = true,
@@ -85,7 +95,7 @@ require'nvim-tree'.setup { -- BEGIN_DEFAULT_OPTS
     },
     diagnostics = {
         enable = false,
-        show_on_dirs = false,
+        show_on_dirs = true,
         icons = {
             hint = "",
             info = "",
@@ -134,4 +144,4 @@ require'nvim-tree'.setup { -- BEGIN_DEFAULT_OPTS
             git = false,
         },
     },
-} -- END_DEFAULT_OPTS
+}

@@ -8,8 +8,9 @@ source $HOME/.config/nvim/config/plugins.vim
 " Language Servers Management
 source $HOME/.config/nvim/config/eslint.lua
 source $HOME/.config/nvim/config/lua-lsp.lua
-source $HOME/.config/nvim/config/emmet-ls.vim
+source $HOME/.config/nvim/config/ls_emmet.lua
 source $HOME/.config/nvim/config/lspconfig.lua
+source $HOME/.config/nvim/config/plugin-neogen.lua
 
 " General Vim Settings
 source $HOME/.config/nvim/config/generalsettings.vim
@@ -21,20 +22,20 @@ source $HOME/.config/nvim/config/generalkeybindings.vim
 source $HOME/.config/nvim/config/plugin-nvim-web-devicons.lua
 source $HOME/.config/nvim/config/plugin-todo-comments.lua
 source $HOME/.config/nvim/config/plugin-indentblankline.lua
-" source $HOME/.config/nvim/config/plugin-nerdtree.vim
 source $HOME/.config/nvim/config/plugin-nvim-tree.lua
-source $HOME/.config/nvim/config/plugin-emmet.vim
 source $HOME/.config/nvim/config/plugin-gitgutter.vim
 source $HOME/.config/nvim/config/plugin-vimwiki.vim
 source $HOME/.config/nvim/config/plugin-cosco.vim
 source $HOME/.config/nvim/config/plugin-treesitter.vim
-source $HOME/.config/nvim/config/plugin-nvim-treesitter-refactor.lua
+" source $HOME/.config/nvim/config/plugin-nvim-treesitter-refactor.lua
+source $HOME/.config/nvim/config/plugin-refactoring.lua
 source $HOME/.config/nvim/config/plugin-telescope.vim
 source $HOME/.config/nvim/config/plugin-cmp-nvim-ultisnips.lua
 source $HOME/.config/nvim/config/plugin-cmp-look.lua
 source $HOME/.config/nvim/config/plugin-cmp.vim
 source $HOME/.config/nvim/config/plugin-lualine.vim
 source $HOME/.config/nvim/config/plugin-markdown-preview.vim
+" source $HOME/.config/nvim/config/plugin-doge.vim
 
 "
 " Line separator between window splits

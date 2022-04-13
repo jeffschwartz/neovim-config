@@ -19,14 +19,18 @@ Plug 'neovim/nvim-lspconfig'
 " Treesitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 Plug 'nvim-treesitter/playground'
-Plug 'nvim-treesitter/nvim-treesitter-refactor'
+Plug 'ThePrimeagen/refactoring.nvim'
+" Plug 'nvim-treesitter/nvim-treesitter-refactor'
 
 " Telescope
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 
-" Doge Documentation Generator
-Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
+" " Doge Documentation Generator
+" Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
+
+" An annotation generator, such as for JSDoc, that supports multiple languages and annotation conventions.
+ Plug 'danymat/neogen'
 
 " Todo Comments
 Plug 'folke/todo-comments.nvim'
@@ -73,7 +77,7 @@ Plug 'lukas-reineke/indent-blankline.nvim'
 " Auto Save
 Plug '907th/vim-auto-save'
 
-" Emmet
+" " Emmet
 Plug 'mattn/emmet-vim'
 
 " Surround

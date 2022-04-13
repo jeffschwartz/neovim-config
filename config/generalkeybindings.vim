@@ -44,7 +44,8 @@ noremap <leader>k <C-b>;
 "nnoremap <leader>v :vsplit<Return><C-w>w
 ""
 "" Move to window
-" nnoremap <leader>ww <C-w>w
+nnoremap <leader>ww <C-w>w
+nnoremap <leader>wo <C-w>o
 " nnoremap <leader>wh <C-w>h
 " nnoremap <leader>wk <C-w>k
 " nnoremap <leader>wj <C-w>j

@@ -12,7 +12,7 @@ snippet td "TODO comment" b
 // ${1:TODO}: `date +%y\/%m\/%d\ %H:%M:%S` - ${2:`echo $USER`} : ${3:description}$0
 endsnippet
 
-snippet cl "console log" b
+snippet cl "console log"
 console.log("$1", $1$2);$0
 endsnippet
 
@@ -22,6 +22,7 @@ endsnippet
 
 snippet mh "module header" b
 /**
+ * @module
  * $1
 */
 
@@ -31,8 +32,8 @@ const ${2:variable name} = require(${3:required module });
 $0
 endsnippet
 
-snippet req "require" b
-const { $2 } = require("${1:required}")$0
+snippet me "module header" b
+module.exports = ($1)$0
 endsnippet
 
 snippet fn "function"

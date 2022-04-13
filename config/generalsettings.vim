@@ -111,6 +111,11 @@ augroup nvim_tree
     autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif
 augroup END
 
+augroup delete_trailing_blank_lines_on_save
+    autocmd!
+    autocmd BufWritePre * :%s#\($\n\s*\)\+\%$##e
+augroup END
+
 " Display the ruler in the status bar
 set ruler
 
@@ -229,7 +234,7 @@ let g:nvim_tree_icons = {
 
 nnoremap <leader>t :NvimTreeToggle<CR>
 nnoremap <leader>r :NvimTreeRefresh<CR>
-nnoremap <leader>n :NvimTreeFindFile<CR>
+nnoremap <leader>l :NvimTreeFindFile<CR>
 " More available functions:
 " NvimTreeOpen
 " NvimTreeClose
