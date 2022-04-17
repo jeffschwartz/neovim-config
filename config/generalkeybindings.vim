@@ -46,12 +46,13 @@ noremap <leader>k <C-b>;
 "" Move to window
 nnoremap <leader>ww <C-w>w
 nnoremap <leader>wo <C-w>o
+nnoremap <leader>w= <C-w>=
+nnoremap <leader>rw <C-w>r
 " nnoremap <leader>wh <C-w>h
 " nnoremap <leader>wk <C-w>k
 " nnoremap <leader>wj <C-w>j
 " nnoremap <leader>wl <C-w>l
 " nnoremap <leader>wr <C-w>r
-" nnoremap <leader>w= <C-w>=
 ""
 "" Close the current window
 "nnoremap <leader>c :close<Return>

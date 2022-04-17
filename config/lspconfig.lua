@@ -50,6 +50,18 @@ for _, lsp in ipairs(servers) do
     }
 end
 
+--Enable (broadcasting) snippet capability for completion
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+require'lspconfig'.jsonls.setup {
+  capabilities = capabilities,
+}
+
+--Enable the json language server using its default values
+--See https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#jsonls for details
+require'lspconfig'.jsonls.setup{}
+
 -- Typescript Configuration
 -- Configure to not show warning "File is a CommonJS module; it may be converted to an E5 module."
 nvim_lsp.tsserver.setup({
