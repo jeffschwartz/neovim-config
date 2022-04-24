@@ -78,3 +78,6 @@ nnoremap <F6> :let @/= expand('<cword>')<cr>cgnutoPairsReturn
 
 " Quit NVIM/Vim
 nnoremap <leader>qq :q<CR>
+
+" Yank all the content of the current buffer.
+nnoremap <leader>ya ggVGy<C-O>
