@@ -61,6 +61,7 @@ set nrformats=
 " Make "find"ing work better
 set path+=**
 set wildmenu
+set wildmode=longest:full,full
 
 " True color support
 set termguicolors

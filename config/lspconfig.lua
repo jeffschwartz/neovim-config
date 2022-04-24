@@ -64,7 +64,7 @@ require'lspconfig'.jsonls.setup{}
 
 -- Typescript Configuration
 -- Configure to not show warning "File is a CommonJS module; it may be converted to an E5 module."
-nvim_lsp.tsserver.setup({
+require'lspconfig'.tsserver.setup({
     handlers = {
         ["textDocument/publishDiagnostics"] = function(_, _, params, client_id, _, config)
             if params.diagnostics ~= nil then
