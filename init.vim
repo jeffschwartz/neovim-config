@@ -33,7 +33,7 @@ source $HOME/.config/nvim/config/plugin-telescope.vim
 source $HOME/.config/nvim/config/plugin-cmp-nvim-ultisnips.lua
 source $HOME/.config/nvim/config/plugin-cmp-look.lua
 source $HOME/.config/nvim/config/plugin-cmp.lua
-source $HOME/.config/nvim/config/plugin-lualine.vim
+source $HOME/.config/nvim/config/plugin-lualine.lua
 source $HOME/.config/nvim/config/plugin-markdown-preview.vim
 " source $HOME/.config/nvim/config/plugin-doge.vim
 

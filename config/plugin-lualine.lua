@@ -1,9 +1,16 @@
-""
-" Lualine
-""
+----
+-- Lualine
+----
 
-lua << EON
 local custom_theme = require'lualine.themes.auto'
+
+local function showspellon ()
+    if vim.wo.spell then
+        return '[Spell Check On]'
+    else return ''
+    end
+end
+
 -- Change the background of lualine_c section for normal mode
 -- custom_gruvbox.normal.c.bg = '#112233' -- rgb colors are supported
 require'lualine'.setup{
@@ -16,6 +23,10 @@ require'lualine'.setup{
     always_divide_middle = true,
     sections = {
         lualine_b = { 'branch', 'diff' },
+        lualine_c = {
+            'filename',
+            showspellon,
+        },
         lualine_z = {
             { 'location' },
             {
@@ -42,4 +53,3 @@ require'lualine'.setup{
         },
     },
 }
-EON
