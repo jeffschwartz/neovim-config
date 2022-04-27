@@ -37,34 +37,9 @@ noremap <leader>j <C-f>;
 " backward
 noremap <leader>k <C-b>;
 
-"" Windows/Splits/Tabs
-""
-"" Split window
-"nnoremap <leader>s :split<Return><C-w>w
-"nnoremap <leader>v :vsplit<Return><C-w>w
-""
-"" Move to window
-nnoremap <leader>ww <C-w>w
-nnoremap <leader>wo <C-w>o
-nnoremap <leader>w= <C-w>=
-nnoremap <leader>rw <C-w>r
-" nnoremap <leader>wh <C-w>h
-" nnoremap <leader>wk <C-w>k
-" nnoremap <leader>wj <C-w>j
-" nnoremap <leader>wl <C-w>l
-" nnoremap <leader>wr <C-w>r
-""
-"" Close the current window
-"nnoremap <leader>c :close<Return>
-"" Close all other window
-"nnoremap <leader>a <C-w>o
-""
-"" Open and close the quickfix window
-"nnoremap gq :copen<CR>
-"nnoremap gqc :ccl<CR>
-
 " Escape
 imap jj <Esc>
+tnoremap jj <C-\><C-n>
 
 " When shifting reselect the previous Visual area
 vnoremap < <gv
@@ -80,4 +55,31 @@ nnoremap <F6> :let @/= expand('<cword>')<cr>cgnutoPairsReturn
 nnoremap <leader>qq :q<CR>
 
 " Yank all the content of the current buffer.
+nnoremap <leader>sa ggVG
+
+" Yank all the content of the current buffer.
 nnoremap <leader>ya ggVGy<C-O>
+
+" Window management
+" To use `ALT+{h,j,k,l}` to navigate windows from any mode including terminal:
+tnoremap <A-h> <C-\><C-N><C-w>h
+tnoremap <A-j> <C-\><C-N><C-w>j
+tnoremap <A-k> <C-\><C-N><C-w>k
+tnoremap <A-l> <C-\><C-N><C-w>l
+tnoremap <A-s> <C-\><C-N><C-w><C-s>
+tnoremap <A-v> <C-\><C-N><C-w><C-v>
+tnoremap <A-=> <C-\><C-N><C-w>=
+inoremap <A-h> <C-\><C-N><C-w>h
+inoremap <A-j> <C-\><C-N><C-w>j
+inoremap <A-k> <C-\><C-N><C-w>k
+inoremap <A-l> <C-\><C-N><C-w>l
+inoremap <A-s> <C-\><C-N><C-w><C-s>
+inoremap <A-v> <C-\><C-N><C-w><C-v>
+inoremap <A-=> <C-\><C-N><C-w>=
+nnoremap <A-h> <C-w>h
+nnoremap <A-j> <C-w>j
+nnoremap <A-k> <C-w>k
+nnoremap <A-l> <C-w>l
+nnoremap <A-s> <C-w>s
+nnoremap <A-v> <C-w>v
+nnoremap <A-=> <C-w>=
