@@ -39,7 +39,7 @@ noremap <leader>k <C-b>;
 
 " Escape
 imap jj <Esc>
-tnoremap jj <C-\><C-n>
+tnoremap <A-[> <C-\><C-n>
 
 " When shifting reselect the previous Visual area
 vnoremap < <gv
@@ -83,3 +83,4 @@ nnoremap <A-l> <C-w>l
 nnoremap <A-s> <C-w>s
 nnoremap <A-v> <C-w>v
 nnoremap <A-=> <C-w>=
+nnoremap <leader>ww <C-w>w
