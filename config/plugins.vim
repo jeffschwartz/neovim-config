@@ -49,6 +49,10 @@ Plug 'onsails/lspkind-nvim'
 Plug 'quangnguyen30192/cmp-nvim-ultisnips'
 Plug 'octaltree/cmp-look'
 
+" nvim-dap Debug Adapter Protocol
+Plug 'mfussenegger/nvim-dap'
+Plug 'mfussenegger/nvim-dap'
+
 " Ultisnips
 Plug 'SirVer/ultisnips'
 

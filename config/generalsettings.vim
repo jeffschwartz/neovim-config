@@ -92,7 +92,7 @@ augroup END
 
 augroup Format-Options
     autocmd!
-    autocmd BufEnter * setlocal formatoptions=t,c,r,j
+    autocmd BufEnter * setlocal formatoptions=t,c,r,o,q,w,a,n,j
 augroup END
 
 " Remove trailing white space from lines when writing the buffer

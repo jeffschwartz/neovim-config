@@ -61,26 +61,29 @@ nnoremap <leader>sa ggVG
 nnoremap <leader>ya ggVGy<C-O>
 
 " Window management
-" To use `ALT+{h,j,k,l}` to navigate windows from any mode including terminal:
+" Use `ALT+{h,j,k,l}` to navigate windows from any mode including terminal:
 tnoremap <A-h> <C-\><C-N><C-w>h
 tnoremap <A-j> <C-\><C-N><C-w>j
 tnoremap <A-k> <C-\><C-N><C-w>k
 tnoremap <A-l> <C-\><C-N><C-w>l
+tnoremap <A-=> <C-\><C-N><C-w>=
 tnoremap <leader>ws <C-\><C-N><C-w><C-s>
 tnoremap <leader>wv <C-\><C-N><C-w><C-v>
-tnoremap <A-=> <C-\><C-N><C-w>=
+"
 inoremap <A-h> <C-\><C-N><C-w>h
 inoremap <A-j> <C-\><C-N><C-w>j
 inoremap <A-k> <C-\><C-N><C-w>k
 inoremap <A-l> <C-\><C-N><C-w>l
+inoremap <A-=> <C-\><C-N><C-w>=
 inoremap <leader>ws <C-\><C-N><C-w><C-s>
 inoremap <leader>wv <C-\><C-N><C-w><C-v>
-inoremap <A-=> <C-\><C-N><C-w>=
+"
 nnoremap <A-h> <C-w>h
 nnoremap <A-j> <C-w>j
 nnoremap <A-k> <C-w>k
 nnoremap <A-l> <C-w>l
-nnoremap <leader>ws <C-w>s
-nnoremap <leader>wv <C-w>v
 nnoremap <A-=> <C-w>=
 nnoremap <leader>ww <C-w>w
+nnoremap <leader>wo <C-w>o
+nnoremap <leader>ws <C-w>s
+nnoremap <leader>wv <C-w>v
