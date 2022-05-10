@@ -116,7 +116,9 @@ Plug 'tpope/vim-unimpaired'
 Plug 'inkarkat/vim-ingo-library' "required for vim-SpellCheck
 Plug 'inkarkat/vim-SpellCheck'
 
+" color schemes
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+Plug 'sainnhe/gruvbox-material'
 
 " VimWiki
 Plug 'vimwiki/vimwiki'

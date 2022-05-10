@@ -2,7 +2,7 @@
 -- Lualine
 ----
 
-local custom_theme = require'lualine.themes.auto'
+-- local custom_theme = require'lualine.themes.auto'
 
 local function showspellon ()
     if vim.wo.spell then
@@ -14,7 +14,10 @@ end
 -- Change the background of lualine_c section for normal mode
 -- custom_gruvbox.normal.c.bg = '#112233' -- rgb colors are supported
 require'lualine'.setup{
-    options = { theme  = custom_theme },
+    options = {
+        -- theme = custom_theme
+        theme = 'gruvbox-material'
+    },
     icons_enabled = true,
     theme = 'auto',
     component_separators = { left = '', right = ''},
