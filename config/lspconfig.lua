@@ -40,7 +40,7 @@ end
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
-local servers = { 'tsserver', 'eslint', 'sumneko_lua' }
+local servers = { 'tsserver', 'eslint', 'sumneko_lua', 'rls' }
 for _, lsp in ipairs(servers) do
     nvim_lsp[lsp].setup {
         on_attach = on_attach,
@@ -80,3 +80,7 @@ require'lspconfig'.tsserver.setup({
         end,
     },
 })
+
+-- Rust Configuration
+-- See https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#rls for details
+require'lspconfig'.rls.setup{}

@@ -67,23 +67,24 @@ tnoremap <A-j> <C-\><C-N><C-w>j
 tnoremap <A-k> <C-\><C-N><C-w>k
 tnoremap <A-l> <C-\><C-N><C-w>l
 tnoremap <A-=> <C-\><C-N><C-w>=
-tnoremap <leader>ws <C-\><C-N><C-w><C-s>
-tnoremap <leader>wv <C-\><C-N><C-w><C-v>
+tnoremap <leader>ws <C-\><C-N><C-w><C-s> "split window"
+tnoremap <leader>wv <C-\><C-N><C-w><C-v> "vsplit window"
 "
 inoremap <A-h> <C-\><C-N><C-w>h
 inoremap <A-j> <C-\><C-N><C-w>j
 inoremap <A-k> <C-\><C-N><C-w>k
 inoremap <A-l> <C-\><C-N><C-w>l
 inoremap <A-=> <C-\><C-N><C-w>=
-inoremap <leader>ws <C-\><C-N><C-w><C-s>
-inoremap <leader>wv <C-\><C-N><C-w><C-v>
+inoremap <leader>ws <C-\><C-N><C-w><C-s> "split window"
+inoremap <leader>wv <C-\><C-N><C-w><C-v> "vsplit window"
 "
 nnoremap <A-h> <C-w>h
 nnoremap <A-j> <C-w>j
 nnoremap <A-k> <C-w>k
 nnoremap <A-l> <C-w>l
 nnoremap <A-=> <C-w>=
-nnoremap <leader>ww <C-w>w
-nnoremap <leader>wo <C-w>o
-nnoremap <leader>ws <C-w>s
-nnoremap <leader>wv <C-w>v
+nnoremap <A-r> <C-w>r
+nnoremap <leader>ws <C-w>s "split window"
+nnoremap <leader>wv <C-w>v "vsplit window"
+nnoremap <leader>ww <C-w>w "next split"
+nnoremap <leader>wo <C-w>o "only this split"

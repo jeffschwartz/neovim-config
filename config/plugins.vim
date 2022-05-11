@@ -26,7 +26,10 @@ Plug 'ThePrimeagen/refactoring.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 
-" " Doge Documentation Generator
+" Rust - See https://github.com/simrat39/rust-tools.nvim
+Plug 'simrat39/rust-tools.nvim'
+
+" Doge Documentation Generator
 " Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
 
 " An annotation generator, such as for JSDoc, that supports multiple languages and annotation conventions.

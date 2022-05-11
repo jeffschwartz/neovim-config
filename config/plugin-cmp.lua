@@ -43,6 +43,7 @@ cmp.setup({
         { name = 'tsserver' },
         { name = 'eslint' },
         { name = 'lua' },
+        { name = 'rls' },
         { name = 'ultisnips' },
         { name = 'path' },
         { name = 'look' },

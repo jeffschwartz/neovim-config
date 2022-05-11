@@ -1,14 +1,13 @@
-""
-" Plugin: NVIM Treesitter
-" See: https://github.com/ggreer/the_silver_searcher
-""
+----
+-- Plugin: NVIM Treesitter
+-- See: https://github.com/ggreer/the_silver_searcher
+----
 
-lua <<EOF
 require'nvim-treesitter.configs'.setup {
     -- One of "all", "maintained" (parsers with maintainers), or a list of languages
     ensure_installed = {"lua", "javascript", "json", "typescript", "html",
     "vim", "jsdoc", "regex", "jsonc", "markdown", "yaml", "css", "scss",
-    "bash"},
+    "rust", "bash"},
 
     -- Install languages synchronously (only applied to `ensure_installed`)
     sync_install = false,
@@ -48,4 +47,3 @@ require'nvim-treesitter.configs'.setup {
         },
     }
 }
-EOF

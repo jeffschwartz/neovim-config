@@ -26,7 +26,7 @@ source $HOME/.config/nvim/config/plugin-nvim-tree.lua
 source $HOME/.config/nvim/config/plugin-gitgutter.vim
 source $HOME/.config/nvim/config/plugin-vimwiki.vim
 source $HOME/.config/nvim/config/plugin-cosco.vim
-source $HOME/.config/nvim/config/plugin-treesitter.vim
+source $HOME/.config/nvim/config/plugin-treesitter.lua
 " source $HOME/.config/nvim/config/plugin-nvim-treesitter-refactor.lua
 source $HOME/.config/nvim/config/plugin-refactoring.lua
 source $HOME/.config/nvim/config/plugin-telescope.vim
@@ -34,6 +34,7 @@ source $HOME/.config/nvim/config/plugin-cmp-nvim-ultisnips.lua
 source $HOME/.config/nvim/config/plugin-cmp-look.lua
 source $HOME/.config/nvim/config/plugin-cmp.lua
 source $HOME/.config/nvim/config/plugin-lualine.lua
+source $HOME/.config/nvim/config/plugin-rust-tools.lua
 source $HOME/.config/nvim/config/plugin-markdown-preview.vim
 " source $HOME/.config/nvim/config/plugin-doge.vim
 
