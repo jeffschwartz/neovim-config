@@ -98,15 +98,15 @@ augroup numbertoggle
     autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 augroup END
 
-augroup Format-Options
-    autocmd!
-    autocmd BufEnter * setlocal formatoptions=t,c,r,o,q,w,a,n,j
-augroup END
+" augroup Format-Options
+"     autocmd!
+"     autocmd BufEnter * setlocal formatoptions=t,c,r,o,q,w,a,n,j
+" augroup END
 
 " Remove trailing white space from lines when writing the buffer
-augroup Remove-Trailong-White-Space-From-Lines
+augroup Remove-Trailong-White-Space-From-
     autocmd!
-    autocmd FileType c,cpp,java,javascript,json,ts,php,html,markdown,vim,lua autocmd BufWritePre <buffer> %s/\s\+$//e
+    autocmd FileType c,cpp,java,javascript,json,ts,php,html,markdown,vim,lua,rs autocmd BufWritePre <buffer> %s/\s\+$//e
 augroup END
 
 " Highlight yank

@@ -32,6 +32,8 @@ source $HOME/.config/nvim/config/plugin-refactoring.lua
 source $HOME/.config/nvim/config/plugin-telescope.vim
 source $HOME/.config/nvim/config/plugin-cmp-nvim-ultisnips.lua
 source $HOME/.config/nvim/config/plugin-cmp-look.lua
+source $HOME/.config/nvim/config/plugin-cmp-git.lua
+source $HOME/.config/nvim/config/plugin-lspkind.lua
 source $HOME/.config/nvim/config/plugin-cmp.lua
 source $HOME/.config/nvim/config/plugin-lualine.lua
 source $HOME/.config/nvim/config/plugin-rust-tools.lua

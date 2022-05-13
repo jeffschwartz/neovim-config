@@ -48,7 +48,7 @@ Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'onsails/lspkind-nvim'
-" Plug 'saadparwaiz1/cmp_luasnip'
+Plug 'petertriho/cmp-git'
 Plug 'quangnguyen30192/cmp-nvim-ultisnips'
 Plug 'octaltree/cmp-look'
 
