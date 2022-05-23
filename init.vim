@@ -15,7 +15,7 @@ source $HOME/.config/nvim/config/plugin-neogen.lua
 " General Vim Settings
 source $HOME/.config/nvim/config/generalsettings.vim
 
-" " Key Binings (Mapping)
+" Key Binings (Mapping)
 source $HOME/.config/nvim/config/generalkeybindings.vim
 
 " Plugins Configuration

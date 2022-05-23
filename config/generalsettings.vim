@@ -70,21 +70,22 @@ set termguicolors
 "
 " TokyoNight
 " see https://github.com/folke/tokyonight.nvim for details
-" let g:tokyonight_style = "night"
-" let g:tokyonight_lualine_bold = 1
-" let g:tokyonight_italic_functions = 1
-" let g:tokyonight_italic_variables = 1
-" let g:tokyonight_terminal_colors = 1
-" let g:tokyonight_dark_sidebar = 1
-" let g:tokyonight_dark_float = 1
-" let g:tokyonight_hide_inactive_statusline = 1
-" let g:tokyonight_dark_float = 1
+let g:tokyonight_style = "night"
+let g:tokyonight_lualine_bold = 1
+let g:tokyonight_italic_functions = 1
+let g:tokyonight_italic_variables = 1
+let g:tokyonight_terminal_colors = 1
+let g:tokyonight_dark_sidebar = 1
+let g:tokyonight_dark_float = 1
+let g:tokyonight_hide_inactive_statusline = 1
+let g:tokyonight_dark_float = 1
 " colorscheme tokyonight
 "
 "Gruvbox
 " Available values: 'hard', 'medium'(default), 'soft'
 let g:gruvbox_material_background = 'hard'
 let g:gruvbox_material_better_performance = 1
+let g:gruvbox_material_diagnostic_virtual_text = 'colored'
 colorscheme gruvbox-material
 "
 set background=dark
@@ -191,7 +192,7 @@ set ignorecase
 set smartcase
 set inccommand=nosplit "see http://vimcasts.org/episodes/neovim-eyecandy/ for desciption
 
-" nvim-tree" vimrc
+" nvim-tree
 let g:nvim_tree_indent_markers = 1 "0 by default, this option shows indent markers when folders are open
 let g:nvim_tree_git_hl = 1 "0 by default, will enable file highlight for git attributes (can be used without the icons).
 let g:nvim_tree_highlight_opened_files = 1 "0 by default, will enable folder and file icon highlight for opened files/directories.
