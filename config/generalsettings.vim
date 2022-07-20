@@ -71,22 +71,26 @@ set termguicolors
 " TokyoNight
 " see https://github.com/folke/tokyonight.nvim for details
 let g:tokyonight_style = "night"
+let g:tokyonight_terminal_colors = 1
 let g:tokyonight_lualine_bold = 1
+let g:tokyonight_italic_comments = 1
+let g:tokyonight_italic_keywords = 1
 let g:tokyonight_italic_functions = 1
 let g:tokyonight_italic_variables = 1
-let g:tokyonight_terminal_colors = 1
+let g:tokyonight_transparent = 0
+let g:tokyonight_transparent_sidebar = 0
 let g:tokyonight_dark_sidebar = 1
 let g:tokyonight_dark_float = 1
 let g:tokyonight_hide_inactive_statusline = 1
-let g:tokyonight_dark_float = 1
-" colorscheme tokyonight
+let g:tokyonight_lualine_bold = 1
+colorscheme tokyonight
 "
 "Gruvbox
 " Available values: 'hard', 'medium'(default), 'soft'
-let g:gruvbox_material_background = 'hard'
-let g:gruvbox_material_better_performance = 1
-let g:gruvbox_material_diagnostic_virtual_text = 'colored'
-colorscheme gruvbox-material
+" let g:gruvbox_material_background = 'hard'
+" let g:gruvbox_material_better_performance = 1
+" let g:gruvbox_material_diagnostic_virtual_text = 'colored'
+" colorscheme gruvbox-material
 "
 set background=dark
 
