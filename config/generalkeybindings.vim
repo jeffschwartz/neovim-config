@@ -52,7 +52,7 @@ map <silent> <leader>s :setlocal spell! spelllang=en_us<CR>
 nnoremap <F6> :let @/= expand('<cword>')<cr>cgnutoPairsReturn
 
 " Quit NVIM/Vim
-nnoremap <leader>qq :q<CR>
+nnoremap gq :q<CR>
 
 " Yank all the content of the current buffer.
 nnoremap <leader>sa ggVG

@@ -16,7 +16,8 @@ end
 require'lualine'.setup{
     options = {
         -- theme = custom_theme
-        theme = 'gruvbox-material'
+        -- theme = 'gruvbox-material'
+        theme = 'auto'
     },
     icons_enabled = true,
     theme = 'auto',

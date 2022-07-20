@@ -46,6 +46,11 @@ source $HOME/.config/nvim/config/plugin-markdown-preview.vim
 set laststatus=3
 highlight WinSeparator guibg=None
 
+"
+" Winbar - currently not supported
+" See https://www.youtube.com/watch?v=LKW_SUucO-k
+set winbar=%=%m=\ %f
+
 " Languages
 "
 " Perl Not Supported
