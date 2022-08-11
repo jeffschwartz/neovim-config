@@ -54,7 +54,7 @@ nnoremap <F6> :let @/= expand('<cword>')<cr>cgnutoPairsReturn
 " Quit NVIM/Vim
 nnoremap gq :q<CR>
 
-" Yank all the content of the current buffer.
+" Select all the content of the current buffer.
 nnoremap <leader>sa ggVG
 
 " Yank all the content of the current buffer.
