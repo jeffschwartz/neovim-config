@@ -144,7 +144,6 @@ augroup jsoncFtdetect
     " https://komkom.github.io/
     " https://github.com/mochajs/mocha/issues/3753
     autocmd BufNewFile,BufRead *.jsonc setfiletype jsonc
-    autocmd BufNewFile,BufRead *.json setfiletype jsonc
 
     " Recognize some files known to support JSON with comments
     " Entries sorted by pattern
