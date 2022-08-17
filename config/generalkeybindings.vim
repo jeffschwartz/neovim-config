@@ -38,7 +38,7 @@ noremap <leader>j <C-f>;
 noremap <leader>k <C-b>;
 
 " Escape
-imap jj <Esc>
+inoremap jj <Esc>
 tnoremap <A-[> <C-\><C-n>
 
 " When shifting reselect the previous Visual area
