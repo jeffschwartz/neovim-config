@@ -54,7 +54,7 @@ local on_attach = function(client, bufnr)
                 virtual_text = false,
                 signs = true,
                 underline = true,
-                update_in_insert = false,
+                update_in_insert = true,
                 severity_sort =true,
             })
         end
@@ -65,6 +65,18 @@ local lsp_flags = {
     -- This is the default in Nvim 0.7+
     debounce_text_changes = 150,
 }
+
+local sign = function(opts)
+    vim.fn.sign_define(opts.name, {
+        texthl = opts.name,
+        text = opts.text,
+        numhl = ''
+    })
+end
+sign({name = 'DiagnosticSignError', text = ''})
+sign({name = 'DiagnosticSignWarn', text = '▲'})
+sign({name = 'DiagnosticSignHint', text = '⚑'})
+sign({name = 'DiagnosticSignInfo', text = ''})
 
 require('lspconfig')['pyright'].setup {
     on_attach = on_attach,
