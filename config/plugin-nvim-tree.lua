@@ -111,8 +111,8 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
         args = {},
     },
     diagnostics = {
-        enable = false,
-        show_on_dirs = false,
+        enable = true,
+        show_on_dirs = true,
         debounce_delay = 50,
         icons = {
             hint = "",
