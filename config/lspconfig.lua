@@ -36,29 +36,16 @@ local on_attach = function(client, bufnr)
     vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
     vim.keymap.set('n', '<space>f', vim.lsp.buf.formatting, bufopts)
 
-    -- Display diagnostics in a floating window
-    -- See https://github.com/neovim/nvim-lspconfig/wiki/UI-Customization#show-line-diagnostics-automatically-in-hover-window
-    vim.api.nvim_create_autocmd("CursorHold", {
-        buffer = bufnr,
-        callback = function()
-            local opts = {
-                focusable = false,
-                close_events = { "BufLeave", "CursorMoved", "InsertEnter", "FocusLost" },
-                border = 'rounded',
-                source = 'always',
-                prefix = ' ',
-                scope = 'cursor',
-            }
-            vim.diagnostic.open_float(nil, opts)
-            vim.diagnostic.config({
-                virtual_text = false,
-                signs = true,
-                underline = true,
-                update_in_insert = true,
-                severity_sort =true,
-            })
-        end
+    -- Replace virtual inline diagnostics with a floating window on hover
+    vim.diagnostic.config({
+        signs = true,
+        update_in_insert = true,
+        severity_sort = true,
     })
+
+    -- Show line diagnostics automatically in hover window
+    vim.o.updatetime = 250
+    vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
 end
 
 local lsp_flags = {
