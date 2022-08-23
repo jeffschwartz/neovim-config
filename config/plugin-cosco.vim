@@ -4,8 +4,8 @@
 ""
 
 augroup cosco
-    autocmd FileType javascript,typescript,css,json nmap <silent> <Leader>; <Plug>(cosco-commaOrSemiColon)
-    autocmd FileType javascript,typescript,css,json imap <silent> <Leader>; <c-o><Plug>(cosco-commaOrSemiColon)
+    autocmd FileType javascript,javascriptreact,typescript,typescriptreact,css,json nmap <silent> <Leader>; <Plug>(cosco-commaOrSemiColon)
+    autocmd FileType javascript,javascriptreact,typescript,typescriptreact,css,json imap <silent> <Leader>; <c-o><Plug>(cosco-commaOrSemiColon)
 augroup END
 
 let g:cosco_ignore_comment_lines = 1     " Default : 0
