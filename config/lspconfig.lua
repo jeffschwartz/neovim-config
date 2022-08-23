@@ -49,6 +49,18 @@ local on_attach = function(client, bufnr)
     vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
 end
 
+-- Border around floating windows
+-- See 'border' https://neovim.io/doc/user/api.html#nvim_open_win()
+local win = require('lspconfig.ui.windows')
+local _default_opts = win.default_opts
+
+win.default_opts = function(options)
+  local opts = _default_opts(options)
+  opts.border = "double"
+  return opts
+end
+
+-- Diagnost gutter signs
 local lsp_flags = {
     -- This is the default in Nvim 0.7+
     debounce_text_changes = 150,
