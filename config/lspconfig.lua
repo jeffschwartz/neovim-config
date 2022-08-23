@@ -38,6 +38,7 @@ local on_attach = function(client, bufnr)
 
     -- Replace virtual inline diagnostics with a floating window on hover
     vim.diagnostic.config({
+        virtual_text = false,
         signs = true,
         update_in_insert = true,
         severity_sort = true,
