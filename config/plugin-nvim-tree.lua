@@ -49,7 +49,7 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
         highlight_opened_files = "none",
         root_folder_modifier = ":~",
         indent_markers = {
-            enable = false,
+            enable = true,
             icons = {
                 corner = "└",
                 edge = "│",
@@ -101,7 +101,7 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
         auto_open = true,
     },
     update_focused_file = {
-        enable = false,
+        enable = true,
         update_root = false,
         ignore_list = {},
     },
