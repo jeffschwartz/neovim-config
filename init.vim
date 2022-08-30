@@ -6,9 +6,7 @@
 source $HOME/.config/nvim/config/plugins.vim
 
 " Language Servers Management
-" source $HOME/.config/nvim/config/eslint.lua
 source $HOME/.config/nvim/config/lua-lsp.lua
-source $HOME/.config/nvim/config/ls_emmet.lua
 source $HOME/.config/nvim/config/lspconfig.lua
 source $HOME/.config/nvim/config/plugin-neogen.lua
 

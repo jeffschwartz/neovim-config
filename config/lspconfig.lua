@@ -86,14 +86,18 @@ require('lspconfig')['pyright'].setup {
 require('lspconfig')['eslint'].setup {
     on_attach = on_attach,
     flags = lsp_flags,
+    filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx", "json", "jsonc" },
 }
 
 require('lspconfig')['tsserver'].setup {
     on_attach = on_attach,
     flags = lsp_flags,
+    filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx", "json", "jsonc" },
     init_options = {
-        preferences = { disableSuggestions = true,
+        preferences = {
+            disableSuggestions = false,
         },
+        hostInfo = "neovim",
     },
 }
 
@@ -107,3 +111,5 @@ require('lspconfig')['rust_analyzer'].setup {
 }
 
 require 'lspconfig'.jsonls.setup {}
+
+require'lspconfig'.emmet_ls.setup{}

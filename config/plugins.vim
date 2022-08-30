@@ -1,4 +1,4 @@
-""
+"";
 " This file loads plugins using 'vim-plug' which is autoloaded (i.e. located in)
 " from '~/.nvim/autoload'. The individual plugins are loaded from
 " '~/.local/share/nvim/plugged'.
@@ -85,7 +85,7 @@ Plug 'lukas-reineke/indent-blankline.nvim'
 Plug '907th/vim-auto-save'
 
 " " Emmet
-Plug 'mattn/emmet-vim'
+Plug 'aca/emmet-ls'
 
 " Surround
 Plug 'tpope/vim-surround'
