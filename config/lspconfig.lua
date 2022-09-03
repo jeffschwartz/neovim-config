@@ -78,6 +78,8 @@ sign({name = 'DiagnosticSignWarn', text = '▲'})
 sign({name = 'DiagnosticSignHint', text = '⚑'})
 sign({name = 'DiagnosticSignInfo', text = ''})
 
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+
 require('lspconfig')['pyright'].setup {
     on_attach = on_attach,
     flags = lsp_flags,
@@ -110,11 +112,12 @@ require('lspconfig')['rust_analyzer'].setup {
     }
 }
 
-require 'lspconfig'.jsonls.setup {}
+require'lspconfig'.jsonls.setup {
+  capabilities = capabilities,
+}
 
 local lspconfig = require('lspconfig')
 local configs = require('lspconfig/configs')
-local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 lspconfig.emmet_ls.setup({
     on_attach = on_attach,
