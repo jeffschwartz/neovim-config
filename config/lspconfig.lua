@@ -49,6 +49,9 @@ local on_attach = function(client, bufnr)
     vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
 end
 
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+
 -- Border around floating windows
 -- See 'border' https://neovim.io/doc/user/api.html#nvim_open_win()
 local win = require('lspconfig.ui.windows')
@@ -78,8 +81,6 @@ sign({name = 'DiagnosticSignWarn', text = '▲'})
 sign({name = 'DiagnosticSignHint', text = '⚑'})
 sign({name = 'DiagnosticSignInfo', text = ''})
 
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-
 require('lspconfig')['pyright'].setup {
     on_attach = on_attach,
     flags = lsp_flags,
@@ -88,13 +89,13 @@ require('lspconfig')['pyright'].setup {
 require('lspconfig')['eslint'].setup {
     on_attach = on_attach,
     flags = lsp_flags,
-    filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx", "json", "jsonc" },
+    filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx" },
 }
 
 require('lspconfig')['tsserver'].setup {
     on_attach = on_attach,
     flags = lsp_flags,
-    filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx", "json", "jsonc" },
+    filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx" },
     init_options = {
         preferences = {
             disableSuggestions = false,
@@ -113,12 +114,10 @@ require('lspconfig')['rust_analyzer'].setup {
 }
 
 require'lspconfig'.jsonls.setup {
-  capabilities = capabilities,
+    capabilities = capabilities,
 }
 
 local lspconfig = require('lspconfig')
-local configs = require('lspconfig/configs')
-capabilities.textDocument.completion.completionItem.snippetSupport = true
 lspconfig.emmet_ls.setup({
     on_attach = on_attach,
     capabilities = capabilities,
