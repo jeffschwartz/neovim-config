@@ -10,7 +10,7 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
     auto_reload_on_write = true,
     create_in_closed_folder = false,
     disable_netrw = false,
-    hijack_cursor = false,
+    hijack_cursor = true,
     hijack_netrw = true,
     hijack_unnamed_buffer_when_opening = false,
     ignore_buffer_on_setup = false,
@@ -42,10 +42,10 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
         },
     },
     renderer = {
-        add_trailing = false,
+        add_trailing = true,
         group_empty = false,
         highlight_git = false,
-        full_name = false,
+        full_name = true,
         highlight_opened_files = "none",
         root_folder_modifier = ":~",
         indent_markers = {
