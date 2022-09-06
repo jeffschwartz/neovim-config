@@ -55,3 +55,8 @@ let g:loaded_perl_provider = 0
 " Python Support
 let g:loaded_python_provider= 0
 let g:python3_host_prog ="/opt/homebrew/bin/python3"
+
+" nvim-tree Highlight Groups
+hi NvimTreeWinSeparator guibg=white
+hi NvimTreeNormal guibg=none
+hi NvimTreeEndOfBuffer guibg=none
