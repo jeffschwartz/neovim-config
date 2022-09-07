@@ -75,8 +75,6 @@ inoremap <A-j> <C-\><C-N><C-w>j
 inoremap <A-k> <C-\><C-N><C-w>k
 inoremap <A-l> <C-\><C-N><C-w>l
 inoremap <A-=> <C-\><C-N><C-w>=
-inoremap <A-s> :split<CR>
-inoremap <A-v> :vsplit<CR>
 "
 nnoremap <A-h> <C-w>h
 nnoremap <A-j> <C-w>j
@@ -84,5 +82,6 @@ nnoremap <A-k> <C-w>k
 nnoremap <A-l> <C-w>l
 nnoremap <A-=> <C-w>=
 nnoremap <A-r> <C-w>r
+nnoremap <A-o> <C-w>o
 nnoremap <A-s> :split<CR>
 nnoremap <A-v> :vsplit<CR>
