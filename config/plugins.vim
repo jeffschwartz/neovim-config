@@ -63,7 +63,7 @@ Plug 'SirVer/ultisnips'
 Plug 'gko/vim-coloresque'
 
 " Color Picker
-Plug 'KabbAmine/vCoolor.vim'
+" Plug 'KabbAmine/vCoolor.vim'
 
 " Show Keybindings In Popup
 " Plug 'liuchengxu/vim-which-key'
