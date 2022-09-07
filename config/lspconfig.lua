@@ -40,13 +40,29 @@ local on_attach = function(client, bufnr)
     vim.diagnostic.config({
         virtual_text = false,
         signs = true,
+        underline = true,
         update_in_insert = true,
         severity_sort = true,
     })
 
     -- Show line diagnostics automatically in hover window
     vim.o.updatetime = 250
-    vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
+    -- vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
+    -- vim.cmd [[autocmd! CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false, scope="cursor"})]]
+    vim.api.nvim_create_autocmd("CursorHold", {
+        buffer = bufnr,
+        callback = function()
+            local opts = {
+                focusable = false,
+                close_events = { "BufLeave", "CursorMoved", "InsertEnter", "FocusLost" },
+                border = 'rounded',
+                source = 'always',
+                prefix = ' ',
+                scope = 'cursor',
+            }
+            vim.diagnostic.open_float(nil, opts)
+        end
+    })
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -121,7 +137,7 @@ local lspconfig = require('lspconfig')
 lspconfig.emmet_ls.setup({
     on_attach = on_attach,
     capabilities = capabilities,
-    filetypes = { 'html', 'typescriptreact', 'javascriptreact', 'css', 'sass', 'scss', 'less' },
+    filetypes = { 'html', 'markdown' ,'typescriptreact', 'javascriptreact', 'css', 'sass', 'scss', 'less' },
     init_options = {
       html = {
         options = {
