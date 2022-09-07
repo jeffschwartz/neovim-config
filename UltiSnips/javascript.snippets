@@ -1,10 +1,7 @@
-snippet fh "file header" b
+snippet cc "Multiline Comment Block"
 /**
  * $1
 */
-
-"use strict";
-
 $0
 endsnippet
 
@@ -20,28 +17,9 @@ snippet us "use strict" b
 "use strict";$0
 endsnippet
 
-snippet mh "module header" b
-/**
- * @module
- * $1
-*/
-
-"use strict";
-
-const ${2:variable name} = require(${3:required module });
-$0
-endsnippet
-
-snippet me "module header" b
-module.exports = ($1)$0
-endsnippet
-
-snippet fn "function"
-function ${1:name} (${2:args}) {
-$0
+snippet func "function"
+function ${2: name}(${3: parameters}) {
+	$4
 }
-endsnippet
-
-snippet afn "arrow function" i
-(${1:arguments}) => {$2}$0
+$0
 endsnippet
