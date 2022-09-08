@@ -44,7 +44,7 @@ set hidden
 " Confirm unsaved changes when abandoning a buffer
 set confirm
 
-" Disable backup files
+":Disable backup files
 set nobackup
 set nowritebackup
 
@@ -70,7 +70,7 @@ set termguicolors
 "
 " TokyoNight
 " see https://github.com/folke/tokyonight.nvim for details
-let g:tokyonight_style = "storm"
+" let g:tokyonight_style = "storm"
 let g:tokyonight_terminal_colors = 1
 let g:tokyonight_lualine_bold = 1
 let g:tokyonight_italic_comments = 1
@@ -78,20 +78,26 @@ let g:tokyonight_italic_keywords = 1
 let g:tokyonight_italic_functions = 1
 let g:tokyonight_italic_variableis = 1
 let g:tokyonight_transparent = 1
-let g:tokyonight_transparent_sidebar = 0
-let g:tokyonight_dark_sidebar = 0
-let g:tokyonight_dark_float = 0
+let g:tokyonight_transparent_sidebar = 1
+let g:tokyonight_dark_sidebar = 1
+let g:tokyonight_dark_float = 1
 let g:tokyonight_hide_inactive_statusline = 0
-colorscheme tokyonight
 "
 "Gruvbox
-" Available values: 'hard', 'medium'(default), 'soft'
-" let g:gruvbox_material_background = 'hard'
-" let g:gruvbox_material_better_performance = 1
-" let g:gruvbox_material_diagnostic_virtual_text = 'colored'
-" colorscheme gruvbox-material
+" see https://github.com/morhetz/gruvbox/wiki/Configuration for details
+let g:gruvbox_italic = 1
+let g:gruvbox_underline = 1
+let g:gruvbox_undercurl = 1
+let g:gruvbox_contrast_dark = "hard"
+let g:gruvbox_italicize_strings = 1
+let g:gruvbox_invert_selection = 0
+let g:gruvbox_invert_signs = 1
+let g:gruvbox_improved_strings = 1
+let g:gruvbox_improved_warnings = 1
 "
 set background=dark
+"
+colorscheme gruvbox
 
 " Auto Commands
 " Automatic toggling between line number modes
@@ -175,9 +181,6 @@ set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50
 
 " Enable Auto Save
 let g:auto_save = 0
-
-"  Statplit" Line
-" set laststatus=2
 
 " Spaces
 set tabstop=4 expandtab shiftwidth=4 smarttab

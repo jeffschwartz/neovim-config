@@ -121,7 +121,9 @@ Plug 'inkarkat/vim-SpellCheck'
 
 " color schemes
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
-Plug 'sainnhe/gruvbox-material'
+" Plug 'sainnhe/gruvbox-material'
+Plug 'morhetz/gruvbox'
+Plug 'EdenEast/nightfox.nvim'
 
 " VimWiki
 Plug 'vimwiki/vimwiki'

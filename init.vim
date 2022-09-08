@@ -37,17 +37,6 @@ source $HOME/.config/nvim/config/plugin-rust-tools.lua
 source $HOME/.config/nvim/config/plugin-markdown-preview.vim
 " source $HOME/.config/nvim/config/plugin-doge.vim
 
-"
-" Line separator between window splits
-" See https://www.youtube.com/watch?v=jH5PNvJIa6o&t=2s for info
-set laststatus=3
-highlight WinSeparator guibg=None
-
-"
-" Winbar - currently not supported
-" See https://www.youtube.com/watch?v=LKW_SUucO-k
-set winbar=%=%m=\ %f
-
 " Languages
 "
 " Perl Not Supported
@@ -57,6 +46,17 @@ let g:loaded_python_provider= 0
 let g:python3_host_prog ="/opt/homebrew/bin/python3"
 
 " nvim-tree Highlight Groups
-hi NvimTreeWinSeparator guibg=white
-hi NvimTreeNormal guibg=none
-hi NvimTreeEndOfBuffer guibg=none
+" hi NvimTreeWinSeparator guibg=white
+" hi NvimTreeNormal guibg=none
+" hi NvimTreeEndOfBuffer guibg=none
+
+"
+" Winbar - currently not supported
+" See https://www.youtube.com/watch?v=LKW_SUucO-k
+set winbar=%=%m=\ %f
+
+"
+" Line separator between window splits
+" See https://www.youtube.com/watch?v=jH5PNvJIa6o&t=2s for info
+set laststatus=3
+highlight WinSeparator guibg=None
