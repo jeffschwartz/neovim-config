@@ -1,4 +1,3 @@
-
 ----
 -- Configures the lua-language-server
 -- Note: The source for this config was obtain from https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#sumneko_lua
@@ -19,7 +18,7 @@ local runtime_path = vim.split(package.path, ';')
 table.insert(runtime_path, "lua/?.lua")
 table.insert(runtime_path, "lua/?/init.lua")
 
-require'lspconfig'.sumneko_lua.setup {
+require 'lspconfig'.lua_ls.setup {
     settings = {
         Lua = {
             runtime = {
@@ -30,7 +29,7 @@ require'lspconfig'.sumneko_lua.setup {
             },
             diagnostics = {
                 -- Get the language server to recognize the `vim` global
-                globals = {'vim', 'use'};
+                globals = { 'vim', 'use' },
             },
             workspace = {
                 -- Make the server aware of Neovim runtime files

@@ -1,4 +1,4 @@
-"";
+""
 " This file loads plugins using 'vim-plug' which is autoloaded (i.e. located in)
 " from '~/.nvim/autoload'. The individual plugins are loaded from
 " '~/.local/share/nvim/plugged'.
@@ -13,6 +13,10 @@
 
 call plug#begin()
 
+" :MasonUpdate updates registry contents
+Plug 'williamboman/mason.nvim', { 'do': ':MasonUpdate' }
+Plug 'williamboman/mason-lspconfig.nvim'
+
 " Neovim's builtin language server (client)
 Plug 'neovim/nvim-lspconfig'
 
@@ -25,15 +29,13 @@ Plug 'ThePrimeagen/refactoring.nvim'
 " Telescope
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+
+" null-ls
+Plug 'jose-elias-alvarez/null-ls.nvim'
 
 " Rust - See https://github.com/simrat39/rust-tools.nvim
 Plug 'simrat39/rust-tools.nvim'
-
-" Doge Documentation Generator
-" Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
-
-" An annotation generator, such as for JSDoc, that supports multiple languages and annotation conventions.
- Plug 'danymat/neogen'
 
 " Todo Comments
 Plug 'folke/todo-comments.nvim'
@@ -46,6 +48,7 @@ Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-cmdline'
+Plug 'hrsh7th/cmp-nvim-lsp-signature-help'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'onsails/lspkind-nvim'
 Plug 'petertriho/cmp-git'
@@ -93,12 +96,6 @@ Plug 'tpope/vim-surround'
 " Commentary
 Plug 'tpope/vim-commentary'
 
-" " NERDTree File System Manager
-" Plug 'scrooloose/nerdtree'
-
-" " NERDTree Git Integration
-" Plug 'Xuyuanp/nerdtree-git-plugin'
-
 " nvim-tree.lua
 Plug 'kyazdani42/nvim-web-devicons' " for file icons
 Plug 'kyazdani42/nvim-tree.lua'
@@ -121,8 +118,9 @@ Plug 'inkarkat/vim-SpellCheck'
 
 " color schemes
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+Plug 'luisiacc/gruvbox-baby', {'branch': 'main'}
 " Plug 'sainnhe/gruvbox-material'
-Plug 'morhetz/gruvbox'
+" Plug 'morhetz/gruvbox'
 Plug 'EdenEast/nightfox.nvim'
 
 " VimWiki

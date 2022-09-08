@@ -4,6 +4,7 @@
 ""
 
 augroup cosco
+    autocmd!
     autocmd FileType javascript,javascriptreact,typescript,typescriptreact,css,json nmap <silent> <Leader>; <Plug>(cosco-commaOrSemiColon)
     autocmd FileType javascript,javascriptreact,typescript,typescriptreact,css,json imap <silent> <Leader>; <c-o><Plug>(cosco-commaOrSemiColon)
 augroup END

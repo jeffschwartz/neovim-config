@@ -41,7 +41,7 @@ local on_attach = function(client, bufnr)
         virtual_text = false,
         signs = true,
         underline = true,
-        update_in_insert = true,
+        update_in_insert = false,
         severity_sort = true,
     })
 
@@ -56,11 +56,11 @@ local on_attach = function(client, bufnr)
                 focusable = false,
                 close_events = { "BufLeave", "CursorMoved", "InsertEnter", "FocusLost" },
                 border = 'rounded',
-                source = 'always',
-                prefix = ' ',
-                scope = 'cursor',
+                source = false,
+                -- prefix = '',
+                scope = 'line',
             }
-            vim.diagnostic.open_float(nil, opts)
+            vim.diagnostic.open_float(opts)
         end
     })
 end
@@ -74,9 +74,9 @@ local win = require('lspconfig.ui.windows')
 local _default_opts = win.default_opts
 
 win.default_opts = function(options)
-  local opts = _default_opts(options)
-  opts.border = "double"
-  return opts
+    local opts = _default_opts(options)
+    opts.border = "double"
+    return opts
 end
 
 -- Diagnost gutter signs
@@ -92,10 +92,15 @@ local sign = function(opts)
         numhl = ''
     })
 end
-sign({name = 'DiagnosticSignError', text = ''})
-sign({name = 'DiagnosticSignWarn', text = '▲'})
-sign({name = 'DiagnosticSignHint', text = '⚑'})
-sign({name = 'DiagnosticSignInfo', text = ''})
+sign({ name = 'DiagnosticSignError', text = '' })
+sign({ name = 'DiagnosticSignWarn', text = '▲' })
+sign({ name = 'DiagnosticSignHint', text = '⚑' })
+sign({ name = 'DiagnosticSignInfo', text = '' })
+
+require('lspconfig')['html'].setup {
+    on_attach = on_attach,
+    flags = lsp_flags,
+}
 
 require('lspconfig')['pyright'].setup {
     on_attach = on_attach,
@@ -119,6 +124,20 @@ require('lspconfig')['tsserver'].setup {
         hostInfo = "neovim",
     },
 }
+local util = require "lspconfig/util"
+require('lspconfig')['gopls'].setup {
+    cmd = { "gopls", "serve" },
+    filetypes = { "go", "gomod" },
+    root_dir = util.root_pattern("go.work", "go.mod", ".git"),
+    settings = {
+        gopls = {
+            analyses = {
+                unusedparams = true,
+            },
+            staticcheck = true,
+        },
+    },
+}
 
 require('lspconfig')['rust_analyzer'].setup {
     on_attach = on_attach,
@@ -129,7 +148,7 @@ require('lspconfig')['rust_analyzer'].setup {
     }
 }
 
-require'lspconfig'.jsonls.setup {
+require 'lspconfig'.jsonls.setup {
     capabilities = capabilities,
 }
 
@@ -137,13 +156,13 @@ local lspconfig = require('lspconfig')
 lspconfig.emmet_ls.setup({
     on_attach = on_attach,
     capabilities = capabilities,
-    filetypes = { 'html', 'markdown' ,'typescriptreact', 'javascriptreact', 'css', 'sass', 'scss', 'less' },
+    filetypes = { 'html', 'markdown', 'typescriptreact', 'javascriptreact', 'css', 'sass', 'scss', 'less' },
     init_options = {
-      html = {
-        options = {
-          -- For possible options, see: https://github.com/emmetio/emmet/blob/master/src/config.ts#L79-L267
-          ["bem.enabled"] = true,
+        html = {
+            options = {
+                -- For possible options, see: https://github.com/emmetio/emmet/blob/master/src/config.ts#L79-L267
+                ["bem.enabled"] = true,
+            },
         },
-      },
     }
 })

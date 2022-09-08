@@ -1,7 +1,7 @@
 snippet cc "Multiline Comment Block"
 /**
  * $1
-*/
+ */
 $0
 endsnippet
 
@@ -17,9 +17,22 @@ snippet us "use strict" b
 "use strict";$0
 endsnippet
 
-snippet func "function"
-function ${2: name}(${3: parameters}) {
-	$4
+snippet fd "fn declaration"
+function ${1:name}(${2:parameters}) {
+	$0
 }
+endsnippet
+
+snippet fe "fn expression"
+const ${1:var} = function(${2:parameters}) {
+	$0
+};
+endsnippet
+
+snippet tcb "try/catch block"
+try {
+$1
+} catch (error) {
 $0
+}
 endsnippet

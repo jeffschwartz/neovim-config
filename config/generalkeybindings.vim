@@ -5,10 +5,6 @@
 " inoremap <C-Y> <C-X><C-Y>
 " inoremap <c-x><c-k> <c-x><c-k>
 
-" Make editing and sourcing ~/.config/nvim/init.vim easier
-command! Config execute ":e ~/.config/nvim/init.vim"
-command! Source execute ":source ~/.config/nvim/init.vim"
-
 " Buffers
 "
 " Buffer Navigation
@@ -28,8 +24,14 @@ noremap <leader>bw :bwipe<CR>
 " wipeout all buffers
 noremap <leader>bwa %bwipeout
 "
-" select a buffer fro a list of all buffers
+" select a buffer from a list of all buffers
 nnoremap <F5> :buffers<CR>:b<Space>
+
+" cursor movement, half page up and down, centered
+nnoremap <C-d> <C-d>zz;
+nnoremap <C-u> <C-u>zz;
+nnoremap n nzz;
+nnoremap N Nzz;
 
 " Paging
 " forward
@@ -39,7 +41,7 @@ noremap <leader>k <C-b>;
 
 " Escape
 inoremap jj <Esc>
-tnoremap <A-[> <C-\><C-n>
+vnoremap vv <Esc>
 
 " When shifting reselect the previous Visual area
 vnoremap < <gv
@@ -85,3 +87,12 @@ nnoremap <A-r> <C-w>r
 nnoremap <A-o> <C-w>o
 nnoremap <A-s> :split<CR>
 nnoremap <A-v> :vsplit<CR>
+"
+" tnoremap <A-[> <C-\><C-n>
+
+"Telescope
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+" nnoremap geh <cmd>Telescope find_files hidden=true<cr>

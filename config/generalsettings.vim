@@ -2,6 +2,13 @@
 " General Vim Settings
 ""
 
+" Make editing and sourcing ~/.config/nvim/init.vim easier
+command! Config execute ":e ~/.config/nvim/init.vim"
+command! Source execute ":source ~/.config/nvim/init.vim"
+
+" Set end of buffer character to  " " to not sholw the "~" character
+let &fcs='eob: '
+
 " Path where swap files will reside
 set directory=$HOME/.config/nvim/swapfiles/
 
@@ -11,9 +18,10 @@ set directory=$HOME/.config/nvim/swapfiles/
 " Copy indent from current line when starting a new line (typing <CR>
 " in Insert mode or when using the "o" or "O" command)
 " set autoindent
-"" Do smart autoindenting when starting a new line.
-"" Works for C-like programs, but can also be used for other languages.
-set smartindent
+" "" Do smart autoindenting when starting a new line.
+" "" Works for C-like programs, but can also be used for other languages.
+" set smartindent
+set autoindent
 
 " A comma separated list of options for Insert mode completion
 set completeopt=menu,menuone,noselect
@@ -22,7 +30,7 @@ set completeopt=menu,menuone,noselect
 filetype on
 
 " Gutter width
-set numberwidth=5
+" set numberwidth=6
 
 " Leader
 nnoremap <SPACE> <Nop>
@@ -32,7 +40,7 @@ let mapleader = "\<space>"
 let g:vimsyn_embed = 'l'
 
 " Minimal number of screen lines to keep above and below the cursor
-set scrolloff=4
+" set scrolloff=4
 
 " Show white space as '•' which is useful to spot if a line has trailing white space
 set list
@@ -44,15 +52,15 @@ set hidden
 " Confirm unsaved changes when abandoning a buffer
 set confirm
 
-":Disable backup files
+" Do not want to keep backup files, but do want to backup the file while file is being written.
 set nobackup
-set nowritebackup
+set writebackup
 
 " Better display for messages
-set cmdheight=2
+set cmdheight=1
 
 " Don't give |ins-completion-menu| messages.
-set shortmess+=c
+" set shortmess+=c
 
 " Cause Vim to treat all numerals as decimal, regardless of whether they are
 " octal (i.e. have leading zeros)
@@ -63,43 +71,23 @@ set path+=**
 set wildmenu
 set wildmode=longest:full,full
 
-" True color support
-set termguicolors
-
-" Colorscheme
-"
-" TokyoNight
-" see https://github.com/folke/tokyonight.nvim for details
-" let g:tokyonight_style = "storm"
-let g:tokyonight_terminal_colors = 1
-let g:tokyonight_lualine_bold = 1
-let g:tokyonight_italic_comments = 1
-let g:tokyonight_italic_keywords = 1
-let g:tokyonight_italic_functions = 1
-let g:tokyonight_italic_variableis = 1
-let g:tokyonight_transparent = 1
-let g:tokyonight_transparent_sidebar = 1
-let g:tokyonight_dark_sidebar = 1
-let g:tokyonight_dark_float = 1
-let g:tokyonight_hide_inactive_statusline = 0
-"
-"Gruvbox
-" see https://github.com/morhetz/gruvbox/wiki/Configuration for details
-let g:gruvbox_italic = 1
-let g:gruvbox_underline = 1
-let g:gruvbox_undercurl = 1
-let g:gruvbox_contrast_dark = "hard"
-let g:gruvbox_italicize_strings = 1
-let g:gruvbox_invert_selection = 0
-let g:gruvbox_invert_signs = 1
-let g:gruvbox_improved_strings = 1
-let g:gruvbox_improved_warnings = 1
-"
 set background=dark
+set termguicolors
 "
-colorscheme gruvbox
+""
+"" colorscheme tokyonight-night
+"" colorscheme gruvbox-material
+"colorscheme gruvbox-baby
 
 " Auto Commands
+" Go
+" augroup go
+"     autocmd!
+"     autocmd FileType go nmap <buffer> gd <plug>(lsp-definition)
+"     autocmd FileType go nmap <buffer> ,n <plug>(lsp-next-error)
+"     autocmd FileType go nmap <buffer> ,p <plug>(lsp-previous-error)
+" augroup END
+
 " Automatic toggling between line number modes
 set number relativenumber
 augroup numbertoggle
@@ -114,9 +102,9 @@ augroup END
 " augroup END
 
 " Remove trailing white space from lines when writing the buffer
-augroup Remove-Trailong-White-Space-From-
+augroup RemoveTrailingWhiteSpaceFromBuffer
     autocmd!
-    autocmd FileType c,cpp,java,javascript,json,ts,php,html,markdown,vim,lua,rs autocmd BufWritePre <buffer> %s/\s\+$//e
+    autocmd FileType c,cpp,java,javascript,json,typescript,php,html,markdown,vim,lua,rs autocmd BufWritePre <buffer> %s/\s\+$//e
 augroup END
 
 " Highlight yank
@@ -125,10 +113,10 @@ augroup highlight_yank
     au TextYankPost * silent! lua vim.highlight.on_yank{higroup="IncSearch", timeout=700}
 augroup END
 
-augroup nvim_tree
-    autocmd!
-    autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif
-augroup END
+" augroup nvim_tree
+"     autocmd!
+"     autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif
+" augroup END
 
 augroup delete_trailing_blank_lines_on_save
     autocmd!
@@ -208,7 +196,7 @@ set title
 " If this many milliseconds (default=400) nothing is typed the swap file will be
 " written to disk (see |crash-recovery|).  Also used for the
 " CursorHold autocommand event.
-" set updatetime=100
+set updatetime=100
 
 " Time in milliseconds to wait (defaults to 1000) for a mapped sequence to complete.
 " set timeoutlen=500
