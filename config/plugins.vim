@@ -13,12 +13,12 @@
 
 call plug#begin()
 
+" Neovim's builtin language server (client)
+Plug 'neovim/nvim-lspconfig'
+
 " :MasonUpdate updates registry contents
 Plug 'williamboman/mason.nvim', { 'do': ':MasonUpdate' }
 Plug 'williamboman/mason-lspconfig.nvim'
-
-" Neovim's builtin language server (client)
-Plug 'neovim/nvim-lspconfig'
 
 " Treesitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
