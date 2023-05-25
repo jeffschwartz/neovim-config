@@ -22,7 +22,7 @@ cmp.setup({
         globals = { 'vim' }
     },
     mapping = cmp.mapping.preset.insert({
-        ['<C-b>'] = cmp.mapping.scroll_docs(-4),
+        ['<C-b>'] = cmp.mapping.scroll_docs( -4),
         ['<C-f>'] = cmp.mapping.scroll_docs(4),
         ['<C-Space>'] = cmp.mapping.complete(),
         ['<C-e>'] = cmp.mapping.abort(),
@@ -30,14 +30,14 @@ cmp.setup({
     }),
     sources = cmp.config.sources({
         { name = 'nvim_lsp' },
+        { name = 'buffer',   keywork_length = 5 },
+        { name = 'ultisnips' },
+        { name = 'emmet_ls' },
+    }, {
+        { name = 'look' },
         { name = 'path' },
         { name = 'cmdline' },
-        { name = 'emmet_ls' },
         { name = 'git' },
-        { name = 'ultisnips' },
-    }, {
-        { name = 'buffer', keywork_length = 5 },
-        { name = 'look' },
     }),
     formatting = {
         format = lspkind.cmp_format({

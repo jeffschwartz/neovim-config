@@ -118,18 +118,21 @@ require('lspconfig')['eslint'].setup {
     filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx" },
 }
 
+local util = require "lspconfig/util"
 require('lspconfig')['tsserver'].setup {
     on_attach = on_attach,
     flags = lsp_flags,
     filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx" },
+    root_dir = util.root_pattern("package.json", "tsconfig.json", "jsconfig.json", ".git"),
     init_options = {
         preferences = {
             disableSuggestions = false,
         },
         hostInfo = "neovim",
     },
+    single_file_support = true,
 }
-local util = require "lspconfig/util"
+
 require('lspconfig')['gopls'].setup {
     cmd = { "gopls", "serve" },
     filetypes = { "go", "gomod" },
