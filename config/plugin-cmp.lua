@@ -22,7 +22,7 @@ cmp.setup({
         globals = { 'vim' }
     },
     mapping = cmp.mapping.preset.insert({
-        ['<C-b>'] = cmp.mapping.scroll_docs( -4),
+        ['<C-b>'] = cmp.mapping.scroll_docs(-4),
         ['<C-f>'] = cmp.mapping.scroll_docs(4),
         ['<C-Space>'] = cmp.mapping.complete(),
         ['<C-e>'] = cmp.mapping.abort(),
@@ -36,7 +36,6 @@ cmp.setup({
     }, {
         { name = 'look' },
         { name = 'path' },
-        { name = 'cmdline' },
         { name = 'git' },
     }),
     formatting = {
@@ -45,11 +44,10 @@ cmp.setup({
             maxwidth = 50,
             menu = {
                 nvim_lsp = "[lsp]",
-                ultisnips = "[snp]",
+                ultisnips = "[ultisnips]",
                 look = "[look]",
                 path = "[path]",
-                cmdline = "[cmdline]",
-                emmet = "[emmet]",
+                emmet_ls = "[emmet]",
                 git = "[git]",
                 buffer = "[buf]",
             }
@@ -69,7 +67,7 @@ cmp.setup.filetype('gitcommit', {
 })
 
 -- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
-cmp.setup.cmdline('/', {
+cmp.setup.cmdline({'/', '?'}, {
     mapping = cmp.mapping.preset.cmdline(),
     sources = {
         { name = 'buffer' },
