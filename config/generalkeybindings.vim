@@ -5,6 +5,12 @@
 " inoremap <C-Y> <C-X><C-Y>
 " inoremap <c-x><c-k> <c-x><c-k>
 
+" fugitive (git)
+noremap <leader>g :G<CR>
+noremap <leader>gl :G log --decorate<CR>
+noremap <leader>gc :G commit<CR>
+noremap <leader>gi :G rebase -i
+
 " Buffers
 "
 " Buffer Navigation
@@ -26,12 +32,6 @@ noremap <leader>bwa %bwipeout
 "
 " select a buffer from a list of all buffers
 nnoremap <F5> :buffers<CR>:b<Space>
-
-" cursor movement, half page up and down, centered
-nnoremap <C-d> <C-d>zz;
-nnoremap <C-u> <C-u>zz;
-nnoremap n nzz;
-nnoremap N Nzz;
 
 " Paging
 " forward

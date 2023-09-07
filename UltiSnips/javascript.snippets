@@ -9,7 +9,11 @@ snippet td "TODO comment" b
 // ${1:TODO}: `date +%y\/%m\/%d\ %H:%M:%S` - ${2:`echo $USER`} : ${3:description}$0
 endsnippet
 
-snippet cl "console log"
+snippet log "console log"
+console.log("$1");$0
+endsnippet
+
+snippet cl "console log exp, exp"
 console.log("$1", $1$2);$0
 endsnippet
 
