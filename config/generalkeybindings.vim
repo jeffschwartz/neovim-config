@@ -10,7 +10,10 @@ noremap <leader>g :G<CR>
 noremap <leader>gl :G log --decorate<CR>
 noremap <leader>gc :G commit<CR>
 noremap <leader>gi :G rebase -i
-noremap <leader>gba :G branch --all<CR>
+noremap <leader>gb :G branch --all<CR>
+noremap <leader>gbd :G branch --delete
+noremap <leader>go :G checkout
+noremap <leader>gcb :G checkout --branch
 
 " Buffers
 "
