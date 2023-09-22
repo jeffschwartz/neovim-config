@@ -134,16 +134,14 @@ require('lspconfig')['tsserver'].setup {
 }
 
 require('lspconfig')['gopls'].setup {
-    cmd = { "gopls", "serve" },
+    on_attach = on_attach,
+    capabilities = capabilities,
     filetypes = { "go", "gomod" },
-    root_dir = util.root_pattern("go.work", "go.mod", ".git"),
+    root_dir = util.root_pattern("go.mod", ".git"),
     settings = {
         gopls = {
-            analyses = {
-                unusedparams = true,
-            },
-            staticcheck = true,
-        },
+            buildFlags = { "-tags=integration" },
+        }
     },
 }
 
